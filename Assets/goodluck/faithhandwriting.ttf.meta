@@ -1,0 +1,21 @@
+fileFormatVersion: 2
+guid: 891fb835f4c4644c695005bd95e59e27
+timeCreated: 1485641370
+licenseType: Free
+TrueTypeFontImporter:
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontName: faithhandwriting
+  fontNames:
+  - faithhandwriting
+  fallbackFontReferences: []
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
