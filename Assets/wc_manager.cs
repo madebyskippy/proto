@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using System.IO;
 
 public class wc_manager : MonoBehaviour {
 	public Text display;
@@ -42,7 +43,8 @@ public class wc_manager : MonoBehaviour {
 		for (int i = 0; i < lines.Length; i++) {
 			lines [i] = "";
 //			lines[i] = fillLine (i);
-			for (int j = 0; j < 100; j++) { //just fill each line with 100 words at first :-P UNELEGANT, WHATEVER, I RATHER USE A WHILE LOOP
+			for (int j = 0; j < 100; j++) { 
+				//just fill each line with 100 words at first :-P UNELEGANT, WHATEVER, I RATHER USE A WHILE LOOP
 				int rand = Random.Range (0, dict.Length);
 				lines[i] += dict [rand];
 			}
@@ -79,11 +81,13 @@ public class wc_manager : MonoBehaviour {
 		for (int i = 0; i < displayed.Length; i++) {
 			if (displayed[i].IndexOf(input)>-1){
 				string temp = displayed [i].Substring (0, displayed [i].IndexOf (input));
-				temp += input.ToUpper ();
+				for (int j = 0; j < input.Length; j++) {
+					temp += " ";
+				}
 				temp += displayed [i].Substring (temp.Length, maxLineChara - temp.Length);
 				displayed [i] = temp;
-				Debug.Log ("got it");
-				//TODO add actual feedback to show you got the word
+//				Debug.Log ("got it");
+				System.IO.File.AppendAllText ("worddata.txt", " "+input);
 				displayText ();
 				break;
 			}
@@ -95,7 +99,8 @@ public class wc_manager : MonoBehaviour {
 	void moveText(){
 		//move stuff
 		for (int i = 0; i < displayed.Length; i++) {
-			displayed [i] = lines [i].Substring(count,maxLineChara);
+			displayed [i] = displayed[i].Substring(1)+lines[i][count+maxLineChara];
+//			Debug.Log(displayed[i]);
 		}
 		displayText ();
 	}
@@ -113,9 +118,9 @@ public class wc_manager : MonoBehaviour {
 			int rand = Random.Range (0, dict.Length);
 			lines[i] += dict [rand];
 			charaCount += dict [rand].Length;
-			Debug.Log (dict [rand] + " "+charaCount);
+//			Debug.Log (dict [rand] + " "+charaCount);
 		}
-		Debug.Log (lines[i].Length);
+//		Debug.Log (lines[i].Length);
 		lines[i] = lines[i].Substring (0, maxLineChara);
 		return lines[i];
 	}
