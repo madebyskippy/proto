@@ -214,6 +214,7 @@ public class wc_manager : MonoBehaviour {
 				} else if (mode==4) {
 					count++;
 					UItime.text = ""+(int)(totalTime-count*interval);
+					moveTextV ();
 					if (count * interval > totalTime) {
 						//end
 						System.IO.File.AppendAllText ("Assets/Resources/worddata.txt", " "+wordCountV+"\n");
@@ -224,7 +225,6 @@ public class wc_manager : MonoBehaviour {
 						instructions = "processing..........";
 						instructionsIndex = 0;
 					}
-					moveTextV ();
 				} else if (mode==5) {
 					if ((instructionsIndex + 8) <= instructions.Length) {
 						display.text = instructions.Substring (0, instructionsIndex + 8);
