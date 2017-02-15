@@ -25,7 +25,6 @@ public class meatcontrol : MonoBehaviour {
 	void Start () {
 		fill.text = "";
 		managers = manager.GetComponent<mf_manager> ();
-		Debug.Log (65.ToString ());
 	}
 	
 	// Update is called once per frame

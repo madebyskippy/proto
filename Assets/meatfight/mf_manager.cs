@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class mf_manager : MonoBehaviour {
 	[SerializeField] GameObject fighters;
@@ -20,6 +21,8 @@ public class mf_manager : MonoBehaviour {
 
 	private int[] hp;
 
+	private string mode;
+
 	// Use this for initialization
 	void Start () {
 		fighteranim = fighters.GetComponent<Animator> ();
@@ -30,41 +33,58 @@ public class mf_manager : MonoBehaviour {
 
 		isFull = false;
 		fillLevel = 0;
+
+		mode = "start";
 	}
 	
 	// Update is called once per frame
 	void Update () {
-		if (Random.Range(0f,1f) < probability && !isPunching){
-			Debug.Log ("puncho");
-			//puncho!!!!
-			//start punch timer, let player do the thing
-			timeLeft = punchtime;
-			isPunching = true;
-			if (true) { //Random.Range(0f,1f)<0.5){ //left guy hit
-				//play the sprite stuff
-				hp[0] -= 10;
-				fighteranim.Play ("punchr");
-			} else { //right guy hit
-				//i need sprites for this so it's not in yet --TODO
+		if (mode == "start") {
+			if (Input.GetMouseButtonDown (0)) {
+				mode = "game";
 			}
-			updatehp ();
+		} else if (mode == "game") {
+			if (Random.Range(0f,1f) < probability && !isPunching){
+				Debug.Log ("puncho");
+				//puncho!!!!
+				//start punch timer, let player do the thing
+				timeLeft = punchtime;
+				isPunching = true;
+				if (true) { //Random.Range(0f,1f)<0.5){ //left guy hit
+					hp[0] -= 50;
+					fighteranim.Play ("punchr");
+				} else { //right guy hit
+					//i need sprites for this so it's not in yet --TODO
+				}
+				updatehp ();
+			}
+
+			if (isPunching) {
+				timeLeft -= Time.deltaTime;
+			}
+			if (timeLeft < 0) {
+				isPunching = false;
+				fighteranim.Play ("static");
+			}
+
+			if (isFull) {
+				//screen is full, win!!!
+				Debug.Log("win. eat.");
+				mode = "end";
+				isPunching = false;
+				fighteranim.Play ("endw");
+			}
+			if ((hp [0] <= 0 || hp [1] <= 0) && !isPunching) {
+				//lose!!!
+				mode = "end";
+//				isPunching = false;
+				fighteranim.Play ("endl");
+			}
+		} else if (mode == "end") {
 		}
 
-		if (isPunching) {
-			timeLeft -= Time.deltaTime;
-		}
-		if (timeLeft < 0) {
-			isPunching = false;
-			fighteranim.Play ("static");
-		}
-
-		if (isFull) {
-			//screen is full, win!!!
-			Debug.Log("win. eat.");
-		}
-		if (hp [0] < 0 || hp [1] < 0) {
-			//lose!!!
-			Debug.Log("someone fuckin died!!!");
+		if (Input.GetKeyDown (KeyCode.Alpha0)) {
+			SceneManager.LoadScene ("meatfight");
 		}
 			
 	}
