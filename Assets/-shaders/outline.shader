@@ -20,6 +20,8 @@ CGINCLUDE
 	 
 	uniform float _Outline;
 	uniform float4 _OutlineColor;
+
+	uniform float4 _Color;
 	 
 	v2f vert(appdata v) {
 		// just make a copy of incoming vertex data but scaled according to normal direction
@@ -31,6 +33,19 @@ CGINCLUDE
 	 
 		o.pos.xy += offset * o.pos.z * _Outline;
 		o.color = _OutlineColor;
+		return o;
+	}
+
+	v2f vertColor(appdata v) {
+		// just make a copy of incoming vertex data but scaled according to normal direction
+		v2f o;
+		o.pos = mul(UNITY_MATRIX_MVP, v.vertex);
+	 
+//		float3 norm   = mul ((float3x3)UNITY_MATRIX_IT_MV, v.normal);
+//		float2 offset = TransformViewToProjection(norm.xy);
+//	 
+//		o.pos.xy += offset * o.pos.z * _Outline;
+		o.color = _Color;
 		return o;
 	}
 ENDCG
@@ -69,63 +84,29 @@ ENDCG
 			ZWrite On
 			ZTest LEqual
 			Blend SrcAlpha OneMinusSrcAlpha
-			Material {
-				Diffuse [_Color]
-				Ambient [_Color]
-			}
-			Lighting Off
-			SetTexture [_MainTex] {
-				ConstantColor [_Color]
-				Combine texture * constant
-			}
-			SetTexture [_MainTex] {
-				Combine previous * primary DOUBLE
-			}
-		}
-	}
- 
-	SubShader {
-		Tags { "Queue" = "Transparent" }
- 
-		Pass {
-			Name "OUTLINE"
-			Tags { "LightMode" = "Always" }
-			Cull Front
-			ZWrite Off
-			ZTest Always
-			ColorMask RGB
- 
-			// you can choose what kind of blending mode you want for the outline
-			Blend SrcAlpha OneMinusSrcAlpha // Normal
-			//Blend One One // Additive
-			//Blend One OneMinusDstColor // Soft Additive
-			//Blend DstColor Zero // Multiplicative
-			//Blend DstColor SrcColor // 2x Multiplicative
- 
+//			Material {
+//				Diffuse [_Color]
+//				Ambient [_Color]
+//			}
+//			Lighting Off
+//			SetTexture [_MainTex] {
+//				ConstantColor [_Color]
+//				Combine texture * constant
+//			}
+//			SetTexture [_MainTex] {
+//				Combine previous * primary DOUBLE
+//			}
+
 			CGPROGRAM
-			#pragma vertex vert
-			#pragma exclude_renderers gles xbox360 ps3
+			#pragma vertex vertColor
+			#pragma fragment frag
+			 
+			half4 frag(v2f i) :COLOR {
+				return i.color;
+			}
 			ENDCG
-			SetTexture [_MainTex] { combine primary }
-		}
- 
-		Pass {
-			Name "BASE"
-			ZWrite On
-			ZTest LEqual
-			Blend SrcAlpha OneMinusSrcAlpha
-			Material {
-				Diffuse [_Color]
-				Ambient [_Color]
-			}
-			Lighting Off
-			SetTexture [_MainTex] {
-				ConstantColor [_Color]
-				Combine texture * constant
-			}
-			SetTexture [_MainTex] {
-				Combine previous * primary DOUBLE
-			}
+
+
 		}
 	}
  
