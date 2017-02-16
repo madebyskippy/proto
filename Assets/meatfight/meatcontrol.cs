@@ -10,6 +10,8 @@ public class meatcontrol : MonoBehaviour {
 	[SerializeField] GameObject manager;
 	private mf_manager managers;
 
+	private bool mousedown;
+
 	/*
 	 * if the punchtimer is on, then you can do the actual gameplay
 	 * --take in input, fill in the "fill"
@@ -23,21 +25,23 @@ public class meatcontrol : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
+		mousedown = false;
 		fill.text = "";
 		managers = manager.GetComponent<mf_manager> ();
 	}
 	
 	// Update is called once per frame
 	void Update () {
-		for (int i = 0; i < 26; i++) {
+		//mouse input
+		Vector3 temp = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+		temp.z = 0f;
+		transform.position = temp;
 
-			if (Input.GetKeyDown (KeyCode.A + i)) {
-				if (managers.getIsPunching ())
-					meatfill ((char)(97 + i));
-				else
-					wiggle ();
-			}
-
+		if (Input.GetMouseButtonDown (0)) {
+			mousedown = true;
+		}
+		if (Input.GetMouseButtonUp (0)) {
+			mousedown = false;
 		}
 	}
 
@@ -47,8 +51,15 @@ public class meatcontrol : MonoBehaviour {
 		sq.Append(transform.DOScale(new Vector2(1f, 1f), 0.05f));
 	}
 
-	void meatfill(char letter){
-		fill.text += letter;
-		managers.setFill (1);
+	void OnTriggerEnter2D(Collider2D col){
+		if (col.gameObject.tag == "grid") {
+			if (managers.getIsPunching() && mousedown) {
+				col.gameObject.tag = "gridFull";
+				managers.setFill (1);
+				Color temp = col.gameObject.GetComponent<SpriteRenderer> ().color;
+				temp.a = 1f;
+				col.gameObject.GetComponent<SpriteRenderer> ().color = temp;
+			}
+		}
 	}
 }

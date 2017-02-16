@@ -16,7 +16,7 @@ public class mf_manager : MonoBehaviour {
 	private bool isPunching;
 
 	private int fillLevel;
-	private int fullLevel = 1650; //1650 how many chara it takes to fill the screen at 40 pt font and 0.6 line spacing
+	private int fullLevel = 144;//1650; //1650 how many chara it takes to fill the screen at 40 pt font and 0.6 line spacing
 	private bool isFull;
 
 	private int[] hp;
@@ -51,7 +51,7 @@ public class mf_manager : MonoBehaviour {
 				timeLeft = punchtime;
 				isPunching = true;
 				if (true) { //Random.Range(0f,1f)<0.5){ //left guy hit
-					hp[0] -= 50;
+					hp[0] -= 10;
 					fighteranim.Play ("punchr");
 				} else { //right guy hit
 					//i need sprites for this so it's not in yet --TODO
