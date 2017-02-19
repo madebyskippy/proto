@@ -10,6 +10,8 @@ public class meatcontrol : MonoBehaviour {
 	[SerializeField] GameObject manager;
 	private mf_manager managers;
 
+	Animator anim;
+
 	private bool mousedown;
 
 	/*
@@ -28,6 +30,7 @@ public class meatcontrol : MonoBehaviour {
 		mousedown = false;
 		fill.text = "";
 		managers = manager.GetComponent<mf_manager> ();
+		anim = GetComponent<Animator> ();
 	}
 	
 	// Update is called once per frame
@@ -35,13 +38,16 @@ public class meatcontrol : MonoBehaviour {
 		//mouse input
 		Vector3 temp = Camera.main.ScreenToWorldPoint(Input.mousePosition);
 		temp.z = 0f;
+		temp.y -= 1.5f;
 		transform.position = temp;
 
 		if (Input.GetMouseButtonDown (0)) {
 			mousedown = true;
+			anim.Play ("meatjiggle");
 		}
 		if (Input.GetMouseButtonUp (0)) {
 			mousedown = false;
+			anim.Play ("meatstill");
 		}
 	}
 

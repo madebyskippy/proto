@@ -11,7 +11,7 @@ public class mf_manager : MonoBehaviour {
 
 	private float probability = 0.01f;
 
-	private float punchtime = 3f; //3 second long punchtime
+	private float punchtime = 1.5f; //3 second long punchtime
 	private float timeLeft;
 	private bool isPunching;
 
