@@ -7,6 +7,7 @@ using UnityEngine.SceneManagement;
 public class mf_manager : MonoBehaviour {
 	[SerializeField] GameObject fighters;
 	[SerializeField] GameObject[] hpbar;
+	[SerializeField] GameObject hpbars;
 	private Animator fighteranim;
 
 	private float probability = 0.01f;
@@ -22,10 +23,13 @@ public class mf_manager : MonoBehaviour {
 	private int[] hp;
 
 	private string mode;
+	private int cutNum;
+	[SerializeField] GameObject button;
 
 	// Use this for initialization
 	void Start () {
 		fighteranim = fighters.GetComponent<Animator> ();
+		cutNum = 1;
 
 		hp = new int[2];
 		hp [0] = 100; hp [1] = 100;
@@ -35,15 +39,19 @@ public class mf_manager : MonoBehaviour {
 		fillLevel = 0;
 
 		mode = "start";
+		fighteranim.Play ("cut-intro-"+cutNum);
+
+		button.SetActive (true);
+		hpbars.SetActive (false);
 	}
 
 	// Update is called once per frame
 	void Update () {
 		if (mode == "start") {
-			if (Input.GetMouseButtonDown (0)) {
-				mode = "game";
-				fighteranim.Play ("fight-static");
-			}
+//			if (Input.GetMouseButtonDown (0)) {
+//				mode = "game";
+//				fighteranim.Play ("fight-static");
+//			}
 		} else if (mode == "game") {
 			if (Random.Range(0f,1f) < probability && !isPunching){
 				Debug.Log ("puncho");
@@ -109,5 +117,21 @@ public class mf_manager : MonoBehaviour {
 
 	public bool getIsPunching(){
 		return isPunching;
+	}
+
+	public void increaseCutNum(){
+		if (cutNum < 6) {
+			cutNum++;
+			fighteranim.Play ("cut-intro-" + cutNum);
+		} else {
+			mode = "game";
+			fighteranim.Play ("fight-static");
+			button.SetActive (false);
+			hpbars.SetActive (true);
+		}
+	}
+
+	public string getMode(){
+		return mode;
 	}
 }

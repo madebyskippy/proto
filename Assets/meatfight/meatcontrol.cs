@@ -11,10 +11,11 @@ public class meatcontrol : MonoBehaviour {
 	private mf_manager managers;
 
 	Animator anim;
+	private bool juiceStart;
+	private bool bounceStart;
 
 	private bool mousedown;
 
-	private float lastX;
 
 	// Use this for initialization
 	void Start () {
@@ -23,38 +24,37 @@ public class meatcontrol : MonoBehaviour {
 		managers = manager.GetComponent<mf_manager> ();
 		anim = GetComponent<Animator> ();
 //		anim.Play ("meatjiggle");
-		lastX = transform.position.x;
 	}
 
 	// Update is called once per frame
 	void Update () {
 		//mouse input
-		Vector3 temp = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-		temp.z = 0f;
-		temp.y -= 1.5f;
-		transform.position = temp;
+		if (managers.getMode () != "start") {
+			Vector3 temp = Camera.main.ScreenToWorldPoint (Input.mousePosition);
+			temp.z = 0f;
+			temp.y -= 1.5f;
+			transform.position = temp;
 
 
-
-		lastX = transform.position.x;
-
-		if (Input.GetMouseButtonDown (0)) {
-			mousedown = true;
-			if (managers.getIsPunching ()) {
-				anim.Play ("meatjuice-1");
-				//				anim.PlayQueued ("meatjuice-2");
-			} else {
-				anim.Play ("meatjiggle");
+			if (Input.GetMouseButtonDown (0)) {
+				mousedown = true;
+				if (managers.getIsPunching ()) {
+					anim.Play ("meatjuice-1");
+					//				anim.PlayQueued ("meatjuice-2");
+				} else {
+					anim.Play ("meatjiggle");
+				}
+			}
+			if (Input.GetMouseButtonUp (0)) {
+				mousedown = false;
+				if (managers.getIsPunching()) {
+					anim.Play ("meatjuice-3");
+				} else {
+					anim.Play ("meatstill");
+				}
 			}
 		}
-		if (Input.GetMouseButtonUp (0)) {
-			mousedown = false;
-			if (managers.getIsPunching()) {
-				anim.Play ("meatjuice-3");
-			} else {
-				anim.Play ("meatstill");
-			}
-		}
+
 	}
 
 	void OnTriggerEnter2D(Collider2D col){
@@ -67,5 +67,10 @@ public class meatcontrol : MonoBehaviour {
 				col.gameObject.GetComponent<SpriteRenderer> ().color = temp;
 			}
 		}
+	}
+
+	public void juiceStarted(){
+		juiceStart = true;
+		anim.SetBool ("meatJuiced", juiceStart);
 	}
 }
