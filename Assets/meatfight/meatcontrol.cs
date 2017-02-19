@@ -14,16 +14,7 @@ public class meatcontrol : MonoBehaviour {
 
 	private bool mousedown;
 
-	/*
-	 * if the punchtimer is on, then you can do the actual gameplay
-	 * --take in input, fill in the "fill"
-	 * --if the fill is full, send message to manager
-	 * 
-	 * else you can just flop around
-	 * --take in input, do nothing (but diff action than if you are filling)
-	 * 
-	 */
-
+	private float lastX;
 
 	// Use this for initialization
 	void Start () {
@@ -31,8 +22,10 @@ public class meatcontrol : MonoBehaviour {
 		fill.text = "";
 		managers = manager.GetComponent<mf_manager> ();
 		anim = GetComponent<Animator> ();
+//		anim.Play ("meatjiggle");
+		lastX = transform.position.x;
 	}
-	
+
 	// Update is called once per frame
 	void Update () {
 		//mouse input
@@ -41,20 +34,27 @@ public class meatcontrol : MonoBehaviour {
 		temp.y -= 1.5f;
 		transform.position = temp;
 
+
+
+		lastX = transform.position.x;
+
 		if (Input.GetMouseButtonDown (0)) {
 			mousedown = true;
-			anim.Play ("meatjiggle");
+			if (managers.getIsPunching ()) {
+				anim.Play ("meatjuice-1");
+				//				anim.PlayQueued ("meatjuice-2");
+			} else {
+				anim.Play ("meatjiggle");
+			}
 		}
 		if (Input.GetMouseButtonUp (0)) {
 			mousedown = false;
-			anim.Play ("meatstill");
+			if (managers.getIsPunching()) {
+				anim.Play ("meatjuice-3");
+			} else {
+				anim.Play ("meatstill");
+			}
 		}
-	}
-
-	void wiggle(){
-		Sequence sq = DOTween.Sequence();
-		sq.Append(transform.DOScale(new Vector2(1.25f, 1.25f), 0.05f));
-		sq.Append(transform.DOScale(new Vector2(1f, 1f), 0.05f));
 	}
 
 	void OnTriggerEnter2D(Collider2D col){

@@ -36,12 +36,13 @@ public class mf_manager : MonoBehaviour {
 
 		mode = "start";
 	}
-	
+
 	// Update is called once per frame
 	void Update () {
 		if (mode == "start") {
 			if (Input.GetMouseButtonDown (0)) {
 				mode = "game";
+				fighteranim.Play ("fight-static");
 			}
 		} else if (mode == "game") {
 			if (Random.Range(0f,1f) < probability && !isPunching){
@@ -50,11 +51,12 @@ public class mf_manager : MonoBehaviour {
 				//start punch timer, let player do the thing
 				timeLeft = punchtime;
 				isPunching = true;
-				if (true) { //Random.Range(0f,1f)<0.5){ //left guy hit
+				if (Random.Range(0f,1f)<0.5){ //left guy hit
 					hp[0] -= 10;
-					fighteranim.Play ("punchr");
+					fighteranim.Play ("fight-punch-r");
 				} else { //right guy hit
-					//i need sprites for this so it's not in yet --TODO
+					hp[1] -= 10;
+					fighteranim.Play ("fight-punch-l");
 				}
 				updatehp ();
 			}
@@ -64,7 +66,7 @@ public class mf_manager : MonoBehaviour {
 			}
 			if (timeLeft < 0) {
 				isPunching = false;
-				fighteranim.Play ("static");
+				fighteranim.Play ("fight-static");
 			}
 
 			if (isFull) {
@@ -72,13 +74,17 @@ public class mf_manager : MonoBehaviour {
 				Debug.Log("win. eat.");
 				mode = "end";
 				isPunching = false;
-				fighteranim.Play ("endw");
+				fighteranim.Play ("cut-end-win");
 			}
 			if ((hp [0] <= 0 || hp [1] <= 0) && !isPunching) {
 				//lose!!!
 				mode = "end";
-//				isPunching = false;
-				fighteranim.Play ("endl");
+				//				isPunching = false;
+				if (hp [0] <= 0) {
+					fighteranim.Play ("cut-end-lose-l");
+				} if (hp [1] <= 0) {
+					fighteranim.Play ("cut-end-lose-r");
+				}
 			}
 		} else if (mode == "end") {
 		}
@@ -86,7 +92,7 @@ public class mf_manager : MonoBehaviour {
 		if (Input.GetKeyDown (KeyCode.Alpha0)) {
 			SceneManager.LoadScene ("meatfight");
 		}
-			
+
 	}
 
 	void updatehp(){
