@@ -20,13 +20,10 @@ public class floater : MonoBehaviour {
 		size = Random.Range (0.5f, 1.5f);
 
 		Color temp = sr.color;
-		temp.a = 0.75f;
+		temp.a = 0f;
 		sr.color = temp;
-		DOTween.ToAlpha (()=> sr.color, x=> sr.color = x , 0.25f, Random.Range(5f,10f));
-		transform.localScale= Vector3.one * size/2f;
-		Sequence sq = DOTween.Sequence();
-		sq.Append(transform.DOScale(new Vector2(1f,1f)*size, time/2f));
-		sq.Append(transform.DOScale(new Vector2(1f,1f)*size/2f, time/2f));
+		transform.localScale = Vector3.one * size / 2f;
+		cycle ();
 
 		InvokeRepeating ("changeVelocity", 0f, 0.5f);
 	}
@@ -43,5 +40,16 @@ public class floater : MonoBehaviour {
 	void addForce(){
 		Vector2 direction = new Vector2 (Random.Range(-1f,1f),Random.Range(-1,1f));
 		rb.AddForce (direction * magnitude);
+	}
+
+	void cycle(){
+		Sequence sqA = DOTween.Sequence ();
+		sqA.Append (DOTween.ToAlpha (() => sr.color, x => sr.color = x, 0.75f, time/2f));
+		sqA.Append (DOTween.ToAlpha (() => sr.color, x => sr.color = x, 0f, time/2f));
+//		DOTween.ToAlpha (() => sr.color, x => sr.color = x, 0.25f, time);
+		Sequence sqS = DOTween.Sequence ();
+		sqS.Append (transform.DOScale (new Vector2 (1f, 1f) * size, time / 2f));
+		sqS.Append (transform.DOScale (new Vector2 (1f, 1f) * size / 2f, time / 2f));
+		Invoke ("cycle", time);
 	}
 }
