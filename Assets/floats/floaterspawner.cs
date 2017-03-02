@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class floaterspawner : MonoBehaviour {
+	//put a window around it
 
 	[SerializeField] GameObject floater;
 

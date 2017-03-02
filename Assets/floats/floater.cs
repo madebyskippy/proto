@@ -16,8 +16,7 @@ public class floater : MonoBehaviour {
 		rb = GetComponent<Rigidbody2D> ();
 		sr = GetComponent<SpriteRenderer> ();
 
-		time = Random.Range (5f, 15f);
-		size = Random.Range (0.5f, 1.5f);
+		generateProp ();
 
 		Color temp = sr.color;
 		temp.a = 0f;
@@ -42,6 +41,11 @@ public class floater : MonoBehaviour {
 		rb.AddForce (direction * magnitude);
 	}
 
+	void generateProp(){
+		time = Random.Range (5f, 15f);
+		size = Random.Range (0.5f, 1.5f);
+	}
+
 	void cycle(){
 		Sequence sqA = DOTween.Sequence ();
 		sqA.Append (DOTween.ToAlpha (() => sr.color, x => sr.color = x, 0.75f, time/2f));
@@ -50,6 +54,7 @@ public class floater : MonoBehaviour {
 		Sequence sqS = DOTween.Sequence ();
 		sqS.Append (transform.DOScale (new Vector2 (1f, 1f) * size, time / 2f));
 		sqS.Append (transform.DOScale (new Vector2 (1f, 1f) * size / 2f, time / 2f));
+		generateProp ();
 		Invoke ("cycle", time);
 	}
 }
