@@ -10,6 +10,7 @@ public class floater : MonoBehaviour {
 	private float magnitude = 0.5f;//100f;
 	private float time;
 	private float size;
+	private GameObject origin;
 
 	// Use this for initialization
 	void Start () {
@@ -43,7 +44,7 @@ public class floater : MonoBehaviour {
 
 	void generateProp(){
 		time = Random.Range (5f, 15f);
-		size = Random.Range (0.5f, 1.5f);
+		size = Random.Range (0.75f, 1.75f);
 	}
 
 	void cycle(){
@@ -55,6 +56,11 @@ public class floater : MonoBehaviour {
 		sqS.Append (transform.DOScale (new Vector2 (1f, 1f) * size, time / 2f));
 		sqS.Append (transform.DOScale (new Vector2 (1f, 1f) * size / 2f, time / 2f));
 		generateProp ();
+		transform.position = origin.transform.position;
 		Invoke ("cycle", time);
+	}
+
+	public void setOrigin(GameObject o){
+		origin = o;
 	}
 }
