@@ -25,7 +25,7 @@ public class hbd_manager : MonoBehaviour {
 		"becoming is hard.",
 		"this summer i hope you remember to trust yourself, to hold yourself in all your worth.",
 		"i hope that your becomings in both mind and body feel like home at every stage.",
-		"i hope that you value your tenderness, your creativity, your fluidity, your empathy, your quiet visceral humming life.",
+		"i hope that you value your tenderness, your creativity, your fluidity, your empathy, your quiet life.",
 		"i hope the world gives you back a hundred-hundredfold what you breathe into it.",
 		"i hope you believe wholeheartedly you deserve all of it when it does. ",
 		"i hope it gets easier.",
