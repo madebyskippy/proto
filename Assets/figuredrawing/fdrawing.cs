@@ -9,8 +9,14 @@ public class fdrawing : MonoBehaviour {
 	 * change field of view from 60 --> 110
 	 */
 
-	private float totaltime = 3 * 60f;
+	private float totaltime = 10f;//3 * 60f;
 	private float currenttime;
+
+	[SerializeField] AudioSource whitenoise;
+	[SerializeField] AudioSource beep;
+	[SerializeField] AudioSource clock;
+	[SerializeField] AudioSource[] papers;
+	private float soundprobability = 0.01f;
 
 	[SerializeField] Camera cam;
 	[SerializeField] GameObject start;
@@ -27,6 +33,7 @@ public class fdrawing : MonoBehaviour {
 	void Start () {
 		mousedown = false;
 		grids = gridscript.GetComponent<CS_GridSetup> ().getgrid ();
+		whitenoise.volume = 0;
 		currenttime = 0;
 		isend = false;
 		start.SetActive (true);
@@ -44,7 +51,13 @@ public class fdrawing : MonoBehaviour {
 			endgame ();
 		}
 		if (!isend) {
+			//linear equations for now
 			cam.fieldOfView = 60f + 50f * (currenttime / totaltime);
+			whitenoise.volume = (0.1f) * (currenttime / totaltime);
+
+			if (Random.Range (0f, 1f) < soundprobability) {
+				papers [(int)Random.Range (0f, papers.Length)].Play ();
+			}
 
 			if (Input.GetMouseButtonDown (0)) {
 				mousedown = true;
@@ -77,6 +90,8 @@ public class fdrawing : MonoBehaviour {
 	}
 
 	void endgame(){
+		beep.Play ();
+		clock.Stop ();
 		end.SetActive (true);
 		cam.fieldOfView = 60f;
 		for (int i = 0; i < allthestuff.Length; i++) {
