@@ -1,10 +1,10 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.SceneManagement;
 
-public class mouselookfd : MonoBehaviour {
-	[SerializeField] Camera cam;
+public class mouselookr : MonoBehaviour {
+
+	[SerializeField] Camera[] cams;
 
 	//for mouselook
 	public enum RotationAxes { MouseXAndY = 0, MouseX = 1, MouseY = 2 }
@@ -26,7 +26,7 @@ public class mouselookfd : MonoBehaviour {
 	void Start ()
 	{
 		originalRotation = new Quaternion[3];
-		originalRotation[0] = cam.transform.localRotation;
+		originalRotation[0] = cams[0].transform.localRotation;
 
 		isclamped = false;
 	}
@@ -43,23 +43,25 @@ public class mouselookfd : MonoBehaviour {
 			Quaternion xQuaternion = Quaternion.AngleAxis (rotationX, Vector3.up);
 			Quaternion yQuaternion = Quaternion.AngleAxis (rotationY, -Vector3.right);
 			//			transform.localRotation = originalRotation * xQuaternion * yQuaternion;
-			cam.transform.localRotation = originalRotation [0] * xQuaternion * yQuaternion;
+//			cam.transform.localRotation = originalRotation [0] * xQuaternion * yQuaternion;
+			changeAllCams(originalRotation[0] * yQuaternion * xQuaternion);
 		} else if (axes == RotationAxes.MouseX) {
 			rotationX += Input.GetAxis ("Mouse X") * sensitivityX;
 			rotationX = ClampAngle (rotationX, minimumX, maximumX);
 			Quaternion xQuaternion = Quaternion.AngleAxis (rotationX, Vector3.up);
 			//			transform.localRotation = originalRotation * xQuaternion;
-			cam.transform.localRotation = originalRotation [0] * xQuaternion;
+//			cam.transform.localRotation = originalRotation [0] * xQuaternion;
+			changeAllCams(originalRotation[0] * xQuaternion);
 		} else {
 			rotationY += Input.GetAxis ("Mouse Y") * sensitivityY;
 			rotationY = ClampAngle (rotationY, minimumY, maximumY);
 			Quaternion yQuaternion = Quaternion.AngleAxis (-rotationY, Vector3.right);
 			//			transform.localRotation = originalRotation * yQuaternion;
-			cam.transform.localRotation = originalRotation [0] * yQuaternion;
+//			cam.transform.localRotation = originalRotation [0] * yQuaternion;
+			changeAllCams(originalRotation[0] * yQuaternion);
 		}
 
 		if (Input.GetKeyDown (KeyCode.Space)) {
-			SceneManager.LoadScene ("figuredrawing");
 		}
 		if (Input.GetKeyDown(KeyCode.Escape)) {
 			Application.Quit();
@@ -72,5 +74,11 @@ public class mouselookfd : MonoBehaviour {
 		if (angle > 360F)
 			angle -= 360F;
 		return Mathf.Clamp (angle, min, max);
+	}
+
+	void changeAllCams(Quaternion rot){
+		for (int i = 0; i < cams.Length; i++) {
+			cams [i].transform.localRotation = rot;
+		}
 	}
 }

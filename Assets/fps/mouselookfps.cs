@@ -8,7 +8,7 @@ using UnityEngine.UI;
 
 //mouse look taken from http://answers.unity3d.com/questions/29741/mouse-look-script.html
 
-public class mouselook : MonoBehaviour
+public class mouselookfps : MonoBehaviour
 {
 
 	[SerializeField] private Camera cam;

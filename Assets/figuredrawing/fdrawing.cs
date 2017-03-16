@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using DG.Tweening;
 
 public class fdrawing : MonoBehaviour {
 
@@ -9,7 +10,7 @@ public class fdrawing : MonoBehaviour {
 	 * change field of view from 60 --> 110
 	 */
 
-	private float totaltime = 10f;//3 * 60f;
+	private float totaltime = 3 * 60f;
 	private float currenttime;
 
 	[SerializeField] AudioSource whitenoise;
@@ -23,7 +24,9 @@ public class fdrawing : MonoBehaviour {
 	[SerializeField] GameObject end;
 	[SerializeField] GameObject gridscript;
 	[SerializeField] GameObject hand;
+	[SerializeField] GameObject otherhand;
 	[SerializeField] GameObject[] allthestuff;
+	[SerializeField] GameObject fade;
 	private List<GameObject> grids;
 	private bool mousedown;
 
@@ -38,7 +41,7 @@ public class fdrawing : MonoBehaviour {
 		isend = false;
 		start.SetActive (true);
 		end.SetActive (false);
-		Invoke ("turnOffStart", 15f); //after 15 seconds
+		Invoke ("turnOffStart", 12f); //after 12 seconds + 3 sec fade
 	}
 
 	// Update is called once per frame
@@ -52,8 +55,8 @@ public class fdrawing : MonoBehaviour {
 		}
 		if (!isend) {
 			//linear equations for now
-			cam.fieldOfView = 60f + 50f * (currenttime / totaltime);
-			whitenoise.volume = (0.1f) * (currenttime / totaltime);
+			cam.fieldOfView = 60f + 50f * Mathf.Pow(currenttime / totaltime, 2);
+			whitenoise.volume = (0.1f) * Mathf.Pow(currenttime / totaltime, 2);
 
 			if (Random.Range (0f, 1f) < soundprobability) {
 				papers [(int)Random.Range (0f, papers.Length)].Play ();
@@ -86,14 +89,28 @@ public class fdrawing : MonoBehaviour {
 	}
 
 	void turnOffStart(){
-		start.SetActive (false);
+//		start.SetActive (false);
+		SpriteRenderer sr = start.GetComponent<SpriteRenderer>();
+		DOTween.ToAlpha (() => sr.color, x => sr.color = x, 0f,1f);
 	}
 
 	void endgame(){
 		beep.Play ();
 		clock.Stop ();
 		end.SetActive (true);
-		cam.fieldOfView = 60f;
+		SpriteRenderer sr = end.GetComponent<SpriteRenderer> ();
+		DOTween.ToAlpha (() => sr.color, x => sr.color = x, 1f,3f);
+		SpriteRenderer srf = fade.GetComponent<SpriteRenderer> ();
+		DOTween.ToAlpha (() => srf.color, x => srf.color = x, 1f,3f);
+		Invoke ("turnoff", 3f);
+
+	}
+
+	void turnoff(){
+		//		cam.DOFieldOfView (80f, 10f);
+		string temp = System.DateTime.Now.ToString("yyyyMMddHHmmss");
+//		Debug.Log (temp);
+//		Application.CaptureScreenshot("../Screenshot"+temp+".png");
 		for (int i = 0; i < allthestuff.Length; i++) {
 			allthestuff [i].SetActive (false);
 		}
