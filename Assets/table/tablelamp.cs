@@ -27,6 +27,7 @@ public class tablelamp : MonoBehaviour {
 		hp--;
 		if (hp < 0) {
 			sr.sprite = dark;
+			sr.color = new Color (0.65f, 0.65f, 0.65f);
 			Debug.Log ("deadddddddddd");
 			tm.SendMessage ("dead");
 		}

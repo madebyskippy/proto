@@ -21,6 +21,7 @@ public class tableshape : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
+		GetComponent<SpriteRenderer> ().color = Random.ColorHSV (10f/360f, 60f/360f, 0.3f, 0.8f, 100f/255f, 180f/255f);
 		initialScale = transform.localScale;
 		time = 0;
 		total = Random.Range (5, 10);
@@ -40,7 +41,7 @@ public class tableshape : MonoBehaviour {
 					die ();
 				}
 				time = 0;
-				transform.localScale = initialScale + Vector3.one * Random.Range(-.1f,.1f);
+				transform.localScale = initialScale * Random.Range(0.75f,1.5f);
 				transform.Rotate(new Vector3(0f,0f, Random.Range (-10f, 10f)));
 				interval = Random.Range (0.75f, 1.5f);
 			}
@@ -56,5 +57,9 @@ public class tableshape : MonoBehaviour {
 		shadow.SetActive (true);
 		outline.SetActive (true);
 		isActive = false;
+	}
+
+	public void freeze(){
+		OnMouseDown ();
 	}
 }
