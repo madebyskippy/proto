@@ -7,34 +7,13 @@ using UnityEngine.UI;
 
 public class ra_manager : MonoBehaviour {
 
-	[SerializeField] Text text;
+	[SerializeField] GameObject mask;
 
-	private string[] tweets;
-	private List<string> tweetsToRandomize;
-	private bool[] highlighted;
-	private TextAsset textfile;
+	private List<GameObject> masks;
 
 	// Use this for initialization
 	void Start () {
-		textfile = (TextAsset)Resources.Load("tweets");
-		tweets = textfile.text.Split("\n"[0]);
-		tweetsToRandomize = new List<string> ();
-		tweetsToRandomize.AddRange (tweets);
-		highlighted = new bool[tweets.Length];
-		text.text = "";
-//		for (int i = 0; i < tweets.Length; i++) {
-////			text.text += tweets [i] + "   ";
-//			highlighted[i] = false;
-//			int index = i;//Random.Range(0, tweetsToRandomize.Count);
-////			tweets [i] = tweetsToRandomize [index];
-////			text.text += tweetsToRandomize [index] + "   ";
-////			for (int j=0; j<tweets[index].Length; j++){
-////				text.text += tweets [index] [j];//" ";
-////			}
-//			text.text += tweets[i];
-//			//			tweetsToRandomize.RemoveAt (index);
-//			text.text += "\n";
-//		}
+		masks = new List<GameObject> ();
 	}
 	
 	// Update is called once per frame
@@ -42,42 +21,29 @@ public class ra_manager : MonoBehaviour {
 		if (Input.GetKeyDown(KeyCode.R)) {
 			SceneManager.LoadScene ("ra");
 		}
-	}
 
-	void displayText(){
-		text.text = "";
-		for (int i = 0; i < tweets.Length; i++) {
-			if (highlighted [i]) {
-				text.text += tweets [i];
-			} else {
-				for (int j=0; j<tweets[i].Length; j++){
-					text.text += " ";
-				}
-			}
-			text.text += "\n";
+		for (int i = 0; i < masks.Count; i++) {
+			//jitter them
+			Vector3 incr = new Vector3(Random.Range(-0.5f,0.5f),Random.Range(-0.05f,0.05f),0f);
+			incr.x = Mathf.Clamp (incr.x, -8f, 8f);
+			incr.y = Mathf.Clamp (incr.y, -4.5f,4.5f);
+			masks[i].transform.position += incr;
 		}
 	}
 
-	void randomizeText(){
-		text.text = "";
-		tweetsToRandomize.Clear();
-		tweetsToRandomize.AddRange (tweets);
-		for (int i = 0; i < tweets.Length; i++) {
-			int index = Random.Range(0, tweetsToRandomize.Count);
-			text.text += tweetsToRandomize [index] + "   ";
-			tweetsToRandomize.RemoveAt (index);
-		}
-	}
+	public void addMask(){
+		GameObject temp = Instantiate (mask);
 
-	void clearHighlighted(){
-		for (int i = 0; i < highlighted.Length; i++) {
-			highlighted [i] = false;
-		}
-	}
+		Vector3 pos = new Vector3 (Random.Range(-8f,8f), Random.Range(-4.5f,4.5f), 0f);
+		temp.transform.position = pos;
 
-	public void makeText(){
-		highlighted [Random.Range (0, highlighted.Length)] = true;
-		displayText ();
-	}
+		Vector3 scale = temp.transform.localScale;
+		scale.x = Random.Range (3f, 10f);
+		scale.y = Random.Range (0.075f, 0.2f);
+//		temp.transform.localScale = scale;
+		temp.transform.localScale=Vector3.zero;
+		temp.transform.DOScale (scale, 0.25f);//.SetEase(Ease.InCirc);
 
+		masks.Add (temp);
+	}
 }

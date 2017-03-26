@@ -22,13 +22,13 @@ public class ra_mouse : MonoBehaviour {
 	}
 
 	void OnTriggerEnter2D(Collider2D col) {
-		Debug.Log ("hit");
+//		Debug.Log ("hit");
 //		Destroy (col.gameObject);
 		GameObject temp = col.gameObject;
 		float scale = temp.transform.localScale.x;
 		Sequence sq = DOTween.Sequence ();
 		sq.Append (temp.transform.DOScale (0f, Random.Range (1f, 3f)));
-		sq.Append (temp.transform.DOScale (scale, Random.Range (1f, 3f)));
-//		manager.makeText ();
+		sq.Append (temp.transform.DOScale (scale, Random.Range (1f, 3f)).SetEase(Ease.InCirc));
+		manager.addMask ();
 	}
 }

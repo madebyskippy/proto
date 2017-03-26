@@ -41,7 +41,7 @@ public class ra_growth : MonoBehaviour {
 			temp.transform.localScale = Vector3.zero;
 			Sequence sq = DOTween.Sequence ();
 			sq.Append (temp.transform.DOScale (0f, 1f * i));
-			sq.Append (temp.transform.DOScale (scale, Random.Range (1f, 3f)));//*(i+1)));
+			sq.Append (temp.transform.DOScale (scale, Random.Range (1f, 3f)).SetEase(Ease.InCirc));//*(i+1)));
 		}
 	}
 }
