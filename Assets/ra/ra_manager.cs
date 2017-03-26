@@ -2,47 +2,82 @@
 using System.Collections.Generic;
 using UnityEngine;
 using DG.Tweening;
+using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class ra_manager : MonoBehaviour {
 
-	[SerializeField] GameObject[] kids;
-	[SerializeField] GameObject fillPrefab;
+	[SerializeField] Text text;
 
-	private List<GameObject>[] fillings;
+	private string[] tweets;
+	private List<string> tweetsToRandomize;
+	private bool[] highlighted;
+	private TextAsset textfile;
 
 	// Use this for initialization
 	void Start () {
-		fillings = new List<GameObject>[kids.Length];
-		for (int i = 0; i < kids.Length; i++) {
-			fillings [i] = new List<GameObject> ();
-			fillings[i].Add(kids[i].transform.GetChild(0).gameObject);
-		}
+		textfile = (TextAsset)Resources.Load("tweets");
+		tweets = textfile.text.Split("\n"[0]);
+		tweetsToRandomize = new List<string> ();
+		tweetsToRandomize.AddRange (tweets);
+		highlighted = new bool[tweets.Length];
+		text.text = "";
+//		for (int i = 0; i < tweets.Length; i++) {
+////			text.text += tweets [i] + "   ";
+//			highlighted[i] = false;
+//			int index = i;//Random.Range(0, tweetsToRandomize.Count);
+////			tweets [i] = tweetsToRandomize [index];
+////			text.text += tweetsToRandomize [index] + "   ";
+////			for (int j=0; j<tweets[index].Length; j++){
+////				text.text += tweets [index] [j];//" ";
+////			}
+//			text.text += tweets[i];
+//			//			tweetsToRandomize.RemoveAt (index);
+//			text.text += "\n";
+//		}
 	}
 	
 	// Update is called once per frame
 	void Update () {
-		if (Input.GetKeyDown(KeyCode.Space)) {
-//			poof();
+		if (Input.GetKeyDown(KeyCode.R)) {
+			SceneManager.LoadScene ("ra");
 		}
 	}
 
-	void poof(){
-		float size = fillings [0] [0].transform.localScale.x;
-		GameObject parent = fillings [0] [0];
-		for (int i = 0; i < 10; i++) {
-			GameObject temp = Instantiate (fillPrefab);
-
-			parent = fillings[0] [Random.Range (0, fillings[0].Count)];//-(fillings[0].Count/2))];
-			float xrad = parent.transform.localScale.x * (0.25f + Random.Range(0f,0.25f)) * (Random.Range(0,2)*2-1);
-			float x = Random.Range(0,xrad); //the radius already has randomness in it
-			float y = Mathf.Sqrt(xrad*xrad - x*x)*(Random.Range(0,2)*2-1);
-			//		Debug.Log (y);
-			temp.transform.position = parent.transform.position + new Vector3(x,y,0f);
-
-			temp.transform.localScale = Vector3.one * (0.75f) * size;
-			float scale = temp.transform.localScale.x;
-			temp.transform.localScale = Vector3.zero;
-			temp.transform.DOScale (scale, Random.Range(0.5f,1f)*(i+1));
+	void displayText(){
+		text.text = "";
+		for (int i = 0; i < tweets.Length; i++) {
+			if (highlighted [i]) {
+				text.text += tweets [i];
+			} else {
+				for (int j=0; j<tweets[i].Length; j++){
+					text.text += " ";
+				}
+			}
+			text.text += "\n";
 		}
 	}
+
+	void randomizeText(){
+		text.text = "";
+		tweetsToRandomize.Clear();
+		tweetsToRandomize.AddRange (tweets);
+		for (int i = 0; i < tweets.Length; i++) {
+			int index = Random.Range(0, tweetsToRandomize.Count);
+			text.text += tweetsToRandomize [index] + "   ";
+			tweetsToRandomize.RemoveAt (index);
+		}
+	}
+
+	void clearHighlighted(){
+		for (int i = 0; i < highlighted.Length; i++) {
+			highlighted [i] = false;
+		}
+	}
+
+	public void makeText(){
+		highlighted [Random.Range (0, highlighted.Length)] = true;
+		displayText ();
+	}
+
 }
