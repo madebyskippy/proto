@@ -18,12 +18,9 @@ public class ra_growth : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		if (Input.GetKeyDown(KeyCode.Space)) {
-			poof();
-		}
 	}
 
-	void poof(){
+	public void poof(){
 		float size = transform.localScale.x;
 		GameObject parent = this.gameObject;
 		for (int i = 0; i < 10; i++) {
