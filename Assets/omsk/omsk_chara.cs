@@ -16,11 +16,6 @@ public class omsk_chara : MonoBehaviour {
 	 * some combo of keys leads to stuff...like you have to press 3 diff ones to plant? (one on each row?)
 	 * procedurally generated combos so that the replayability is good
 	 * then i have to make a bunch of assets. so we'll see how that goes
-	 * 
-	 * 
-	 * todo (?):
-	 * -for when you are free and can go anywhere, fade it out as you go near the border and freeze player movement
-	 * 	just so you don't go crazy out of bounds
 	 */
 
 	[SerializeField] GameObject limbs;
@@ -55,15 +50,24 @@ public class omsk_chara : MonoBehaviour {
 		dir *= -1;
 
 		if (!isStunned) {
-			if (dist < radius || isFree) {
-				transform.position += increment;
+			if (isFree) {
+				Vector3 temp = transform.position + increment;
+				temp.z = Mathf.Clamp (temp.z, -6.75f, 20f);
+				float xlimit = temp.z * (26f / 26.75f) + 9.57f;
+//				Debug.Log (xlimit);
+				temp.x = Mathf.Clamp (temp.x, xlimit * -1, xlimit);
+				transform.position = temp;
 			} else {
-				//bump character back a bit
-				isStunned = true;
-				stunTimer = 0f;
-				transform.position += dir;
-				manager.bump ();
-				animator.Play ("stun");
+				if (dist < radius) {
+					transform.position += increment;
+				} else {
+					//bump character back a bit
+					isStunned = true;
+					stunTimer = 0f;
+					transform.position -= new Vector3 (transform.position.x, 0f, transform.position.z).normalized;
+					manager.bump ();
+					animator.Play ("stun");
+				}
 			}
 
 			if (dir.magnitude != 0) {
@@ -74,14 +78,16 @@ public class omsk_chara : MonoBehaviour {
 				animator.Play ("idle");
 			}
 
-			if (Input.GetKeyDown (KeyCode.M)) {
+			if (Input.GetKeyDown (KeyCode.Space)) {
 				bool b = false;
 				if (!isFree)
 					b = manager.plant ();
 				if (b) {
 					//play animation for planting
+					animator.Play ("plant");
 				} else {
 					//play animation for not being able to plant
+					animator.Play ("noneleft");
 				}
 			}
 		} else {
