@@ -90,15 +90,15 @@ public class omsk_manager : MonoBehaviour {
 		}
 	}
 
-	public bool plant(){
+	public bool plant(int[] p){
 		if (plants.Count < maxPlants) {
 //			Debug.Log (plants.Count);
 			GameObject f = Instantiate (flower, chara.transform.position, Quaternion.identity);
-			f.transform.GetChild (0).gameObject.GetComponent<SpriteRenderer> ().sprite = plant1[Random.Range(0,plant1.Length)];
+			f.transform.GetChild (0).gameObject.GetComponent<SpriteRenderer> ().sprite = plant1 [p [0]];//Random.Range(0,plant1.Length)];
 			f.transform.GetChild (0).gameObject.GetComponent<SpriteRenderer> ().color = Random.ColorHSV(0f, 1f, 0.15f, 0.25f, 0.75f, 1f);
-			f.transform.GetChild (1).gameObject.GetComponent<SpriteRenderer> ().sprite = plant2[Random.Range(0,plant2.Length)];
+			f.transform.GetChild (1).gameObject.GetComponent<SpriteRenderer> ().sprite = plant2 [p [1]];//Random.Range(0,plant2.Length)];
 			f.transform.GetChild (1).gameObject.GetComponent<SpriteRenderer> ().color = Random.ColorHSV(0f, 1f, 0.15f, 0.25f, 0.75f, 1f);
-			f.transform.GetChild (2).gameObject.GetComponent<SpriteRenderer> ().sprite = plant3[Random.Range(0,plant3.Length)];
+			f.transform.GetChild (2).gameObject.GetComponent<SpriteRenderer> ().sprite = plant3 [p [2]];//Random.Range(0,plant3.Length)];
 			f.transform.GetChild (2).gameObject.GetComponent<SpriteRenderer> ().color = Random.ColorHSV(0f, 1f, 0.15f, 0.25f, 0.75f, 1f);
 			f.transform.position = new Vector3 (f.transform.position.x, 0f, f.transform.position.z);
 			f.transform.localScale = Vector3.one * Random.Range (0.5f, 1.75f);
