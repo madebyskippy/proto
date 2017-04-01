@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using DG.Tweening;
 
 public class omsk_manager : MonoBehaviour {
 
@@ -18,6 +19,8 @@ public class omsk_manager : MonoBehaviour {
 	[SerializeField] GameObject welcome;
 	[SerializeField] GameObject bird;
 	[SerializeField] GameObject stay;
+	[SerializeField] GameObject instruc;
+	private int instrucCount;
 
 
 	private float radius;
@@ -29,6 +32,8 @@ public class omsk_manager : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
+		instrucCount = 0;
+		instruc.SetActive (true);
 		welcome.SetActive (false);
 		bird.SetActive (false);
 		stay.SetActive (false);
@@ -84,28 +89,37 @@ public class omsk_manager : MonoBehaviour {
 			cam.backgroundColor = new Color (0.5f,0.5f,0.5f,1f);
 			bird.SetActive (true);
 			welcome.SetActive (false);
+			instruc.SetActive (false);
 			clearAllPlants();
 			ground.GetComponent<SpriteRenderer>().color = Color.black;
 			chara.GetComponent<omsk_chara> ().setFree (true);
 		}
 	}
 
-	public bool plant(int[] p){
+	public bool plant(){
 		if (plants.Count < maxPlants) {
 //			Debug.Log (plants.Count);
 			GameObject f = Instantiate (flower, chara.transform.position, Quaternion.identity);
-			f.transform.GetChild (0).gameObject.GetComponent<SpriteRenderer> ().sprite = plant1 [p [0]];//Random.Range(0,plant1.Length)];
+			f.transform.GetChild (0).gameObject.GetComponent<SpriteRenderer> ().sprite = plant1 [Random.Range(0,plant1.Length)];
 			f.transform.GetChild (0).gameObject.GetComponent<SpriteRenderer> ().color = Random.ColorHSV(0f, 1f, 0.15f, 0.25f, 0.75f, 1f);
-			f.transform.GetChild (1).gameObject.GetComponent<SpriteRenderer> ().sprite = plant2 [p [1]];//Random.Range(0,plant2.Length)];
+			f.transform.GetChild (1).gameObject.GetComponent<SpriteRenderer> ().sprite = plant2 [Random.Range(0,plant2.Length)];
 			f.transform.GetChild (1).gameObject.GetComponent<SpriteRenderer> ().color = Random.ColorHSV(0f, 1f, 0.15f, 0.25f, 0.75f, 1f);
-			f.transform.GetChild (2).gameObject.GetComponent<SpriteRenderer> ().sprite = plant3 [p [2]];//Random.Range(0,plant3.Length)];
+			f.transform.GetChild (2).gameObject.GetComponent<SpriteRenderer> ().sprite = plant3 [Random.Range(0,plant3.Length)];
 			f.transform.GetChild (2).gameObject.GetComponent<SpriteRenderer> ().color = Random.ColorHSV(0f, 1f, 0.15f, 0.25f, 0.75f, 1f);
 			f.transform.position = new Vector3 (f.transform.position.x, 0f, f.transform.position.z);
 			f.transform.localScale = Vector3.one * Random.Range (0.5f, 1.75f);
+			float s = f.transform.localScale.x;
+			f.transform.localScale = Vector3.one * 0.1f;
+			f.transform.DOScale (s, 1f);
 			plants.Add (f);
+			instrucCount++;
+			if (instrucCount > 2) {
+				instruc.SetActive (false);
+			}
 			return true;
 		} else {
 			welcome.SetActive (true);
+			instruc.SetActive (false);
 			return false;
 		}
 	}
