@@ -69,8 +69,8 @@ public class omsk_chara : MonoBehaviour {
 			}
 
 			if (dir.magnitude != 0) {
-//				animator.Play ("walk");
 				if (animator.GetInteger ("mode") == -1) {
+					animator.Play ("walk");
 					changeMode (0);
 				}
 				float rotationSpeed = 25f;
@@ -78,14 +78,17 @@ public class omsk_chara : MonoBehaviour {
 			} else {
 //				animator.Play ("idle");
 				if (animator.GetInteger ("mode") == 0) {
+					animator.Play ("idle");
 					changeMode (-1);
 				}
 			}
 
 			if (Input.GetKeyDown (KeyCode.Space) ) {
 				bool b = false;
-				if (!isFree)
+				if (!isFree) {
 					b = manager.plant ();
+					isStunned = true;
+				}
 				if (b) {
 					//play animation for planting
 					animator.Play ("plant");
@@ -114,5 +117,8 @@ public class omsk_chara : MonoBehaviour {
 	//for animations
 	public void changeMode(int m){
 		anim.SetInteger ("mode", m);
+		if (m==3){
+			isStunned = false;
+		}
 	}
 }
