@@ -1,9 +1,14 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using DG.Tweening;
+using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class foundassets : MonoBehaviour {
 
+	[SerializeField] Text s;
+	[SerializeField] GameObject e;
 	[SerializeField] Sprite[] circles;
 	[SerializeField] GameObject prefab;
 	float topX = -3.1f; //-2.31
@@ -19,14 +24,19 @@ public class foundassets : MonoBehaviour {
 
 	int target;
 	int score;
+	float interval = 5f;
+	float timer;
+	int lives = 4;
 
-	private int[] keys = {16,22,4,17,19,24,20,8,14,15};
+	//{16,22,4,17,19,24,20,8,14,15}
+	private int[] keys = {0,18,3,5,6,7,9,10,11};
 
 	// Use this for initialization
 	void Start () {
 		fingerdown = new bool[]{false,false,false,false,false,false,false,false,false};
 		insequence = false;
 		lastkey = -1;
+		e.SetActive (false);
 
 		col = new List<GameObject>[9];
 		for (int i = 0; i < col.Length; i++) {
@@ -45,19 +55,30 @@ public class foundassets : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
+		if (Input.GetKeyDown(KeyCode.Space)) {
+			SceneManager.LoadScene ("foundassets");
+		}
+		if (Input.GetKeyDown(KeyCode.Escape)) {
+			Application.Quit();
+		}
+
 		for (int i = 0; i < circles.Length; i++) {
 			if (Input.GetKeyDown(KeyCode.A+keys[i])){
-				GameObject temp = col[i][0];
-				col [i].RemoveAt (0);
-				col [i].Add (temp);
-//				move (i);
 				fingerdown[i] = true;
 
-				if (i + 1 == lastkey || i - 1 == lastkey) {
-					insequence = true;
-					lastkey = i;
+
+				if (insequence) {
+					if (i + 1 == lastkey || i - 1 == lastkey) {
+						insequence = true;
+						lastkey = i;
+					} else {
+						insequence = false;
+					}
 				} else {
-					insequence = false;
+					if (i == lastkey || lastkey == -1) {
+						insequence = true;
+						lastkey = i;
+					}
 				}
 
 			}
@@ -66,32 +87,58 @@ public class foundassets : MonoBehaviour {
 			}
 		}
 
-		if (checkdown()) {
-			GetComponent<SpriteRenderer> ().color = new Color (1,1,1,1);
+		if (checkdown() && insequence) {
+//			GetComponent<SpriteRenderer> ().color = new Color (1,1,1,1);
+			e.SetActive(false);
 		} else {
-			GetComponent<SpriteRenderer> ().color = new Color (1,1,1,0.8f);
+			//			GetComponent<SpriteRenderer> ().color = new Color (1,1,1,0.8f);
+			e.SetActive(true);
 		}
 
-		if (insequence) {
-			transform.localScale = Vector3.one;
-		} else {
-			transform.localScale = Vector3.one * 0.8f;
-		}
 
-		if (lastkey != -1) {
+		if (lastkey > -1) {
+			timer += Time.deltaTime;
 			rot (lastkey);
 			if (lastkey == target) {
 				score++;
 				newtarget ();
 				Debug.Log ("score: " + score);
+				interval *= 0.95f;
+			} else if (timer > interval) {
+				decrease ();
+				newtarget ();
 			}
 		}
+
+		if (lives < 1) {
+			lastkey = -2;
+			s.text = "" + score;
+		} else {
+			s.text = "";
+		}
+
 	}
 
 	void newtarget(){
+		int old = target;
 		target = Random.Range (0, 9);
+		for (int j = 0; j < col[old].Count; j++) {
+			col [old][j].GetComponent<SpriteRenderer>().color=Color.white;
+		}
 		for (int j = 0; j < col[target].Count; j++) {
-			col [target][j].GetComponent<SpriteRenderer>().color=Color.red;
+			col [target] [j].GetComponent<SpriteRenderer>().color=new Color(1f,0f,0f,1f);
+		}
+		timer = 0;
+	}
+
+	void decrease(){
+		lives--;
+		for (int i = 0; i < col.Length; i++) {
+			for (int j = 0; j < col [0].Count; j++) {
+				if (j < (4 - lives) || j > (col[0].Count - 1 - (4-lives))) {
+					col [i] [j].SetActive (false);
+				}
+			}
 		}
 	}
 
