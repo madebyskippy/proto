@@ -6,63 +6,124 @@ using DG.Tweening;
 
 public class getup_manager : MonoBehaviour {
 
-	[SerializeField] GameObject bar;
-	[SerializeField] GameObject[] windows;
+	[SerializeField] GameObject instruc;
+	[SerializeField] GameObject winscreen;
+	[SerializeField] GameObject frame;
 
-	private int scene;
+	private GameObject[] frames;
+	private int[] order;
+	private List<int> temp_order;
 
-	private float interval = 1f; //press every second
-	private float time;
+	private List<int> shown;
+	private List<int> pressed;
 
 	private bool isDead;
 
 	// Use this for initialization
 	void Start () {
-		time = 0;
-		isDead = false;
-		scene = 0; //start at the beginning
+		winscreen.SetActive (false);
+
+		frames = new GameObject[frame.transform.childCount];
+		pressed = new List<int>();
+
+		for (int i = 0; i < frames.Length; i++) {
+			frames [i] = frame.transform.GetChild (i).gameObject;
+			frames [i].SetActive (false);
+		}
+		order = new int[frames.Length];
+		temp_order = new List<int> ();
+		for (int i = 0; i < order.Length; i++) {
+			temp_order.Add(i);
+		}
+		for (int i = 0; i < order.Length; i++) {
+			int temp = temp_order [Random.Range (0, temp_order.Count)];
+			order [i] = temp;
+			temp_order.Remove (temp);
+		}
+		isDead = true;
+
+		shown = new List<int>();
+		for (int i = 0; i < 3; i++) {
+			shown.Add((int)(i*frames.Length/3)+Random.Range(0,frames.Length/3));
+		}
 	}
 	
 	// Update is called once per frame
 	void Update () {
 
-		if (Input.GetKeyDown(KeyCode.R)) {
-			SceneManager.LoadScene ("getup");
+		if (Input.GetKeyDown(KeyCode.Space)) {
+			if (!instruc.activeSelf) {
+				SceneManager.LoadScene ("getup");
+			} else {
+				instruc.SetActive (false);
+				isDead = false;
+			}
 		}
 		if (Input.GetKeyDown(KeyCode.Escape)) {
 			Application.Quit();
 		}
 
 		if (!isDead) {
-			if (Input.GetKeyDown (KeyCode.X)) {
-				time = 0;
+			for (int i = 0; i < 26; i++) {
+				if (Input.GetKeyDown (KeyCode.A + i)) {
+					press(i);
+				}
+			}
+			for (int i = 0; i < 10; i++) {
+				if (Input.GetKeyDown (KeyCode.Alpha1 + i)) {
+					press(26+i);
+				}
+			}
+			if (Input.GetKeyDown (KeyCode.Alpha0)) {
+				press (35);
+			}
+				
+			for (int i = 0; i < frames.Length; i++) {
+				if (shown.Contains (i)) {
+					frames [i].SetActive (true);
+				} else {
+					frames [i].SetActive (false);
+				}
 			}
 
-			time += Time.deltaTime;
-			if (time > interval) {
-				time = interval;
-				//dead
-				isDead = true;
-				dead ();
+			if (pressed.Count == frames.Length) {
+				bool win = true;
+				for (int i = 0; i < frames.Length; i++) {
+					if (pressed [i] != i) {
+						win = false;
+						break;
+					}
+				}
+				if (win) {
+					winscreen.SetActive (true);
+//					Debug.Log ("u win");
+					for (int i = 0; i < frames.Length; i++) {
+						frames [i].SetActive (false);
+					}
+					frames [frames.Length - 1].SetActive (true);
+				}
 			}
 
-			bar.transform.localScale = new Vector3 ((0.1f) * (1f - time / interval), 0.01f, 1f);
+			if (pressed.Count > frames.Length) {
+				pressed.Remove (0);
+			}
+
+		}
+	}
+
+	void press(int c){
+		if (shown[shown.Count-1] != c){
+			shown.RemoveAt (0);
+			shown.Add (order [c]);
+			pressed.Add (c);
 		}
 	}
 
 	void dead(){
 		Debug.Log ("dead");
-		windows [scene].transform.GetChild (0).DOScaleX (35f, 5f);//windows[scene].transform.GetChild(0).transform.localScale.x*1.5f, 5f);
-		windows [scene].transform.GetChild (1).DOScaleX (35f, 5f);//windows[scene].transform.GetChild(1).transform.localScale.x*1.5f, 5f);
-		windows [scene].transform.GetChild (2).DOScaleY (15f, 5f);//[scene].transform.GetChild(2).transform.localScale.y*1.5f, 5f);
-		windows [scene].transform.GetChild (3).DOScaleY (15f, 5f);//windows[scene].transform.GetChild(3).transform.localScale.y*1.5f, 5f);
 	}
 
 	void end(){
 		Debug.Log ("end");
-		windows [scene].transform.GetChild (0).DOScaleX (0f, 5f);
-		windows [scene].transform.GetChild (1).DOScaleX (0f, 5f);
-		windows [scene].transform.GetChild (2).DOScaleY (0f, 5f);
-		windows [scene].transform.GetChild (3).DOScaleY (0f, 5f);
 	}
 }
