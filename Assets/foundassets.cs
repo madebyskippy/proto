@@ -7,6 +7,10 @@ using UnityEngine.SceneManagement;
 
 public class foundassets : MonoBehaviour {
 
+	[SerializeField] AudioSource roll;
+	[SerializeField] AudioSource jingle;
+	[SerializeField] AudioSource wrong;
+
 	[SerializeField] Text s;
 	[SerializeField] GameObject e;
 	[SerializeField] Sprite[] circles;
@@ -37,6 +41,9 @@ public class foundassets : MonoBehaviour {
 		insequence = false;
 		lastkey = -1;
 		e.SetActive (false);
+
+		roll.volume = 0f;
+		wrong.volume = 0f;
 
 		col = new List<GameObject>[9];
 		for (int i = 0; i < col.Length; i++) {
@@ -88,10 +95,14 @@ public class foundassets : MonoBehaviour {
 		}
 
 		if (checkdown() && insequence) {
-//			GetComponent<SpriteRenderer> ().color = new Color (1,1,1,1);
+			//			GetComponent<SpriteRenderer> ().color = new Color (1,1,1,1);
+			roll.volume = 1f;
+			wrong.volume = 0f;
 			e.SetActive(false);
 		} else {
 			//			GetComponent<SpriteRenderer> ().color = new Color (1,1,1,0.8f);
+			roll.volume = 0f;
+			wrong.volume = 1f;
 			e.SetActive(true);
 		}
 
@@ -100,12 +111,15 @@ public class foundassets : MonoBehaviour {
 			timer += Time.deltaTime;
 			rot (lastkey);
 			if (lastkey == target) {
+				jingle.Play ();
 				score++;
+				targetpop (target);
 				newtarget ();
 				Debug.Log ("score: " + score);
 				interval *= 0.95f;
 			} else if (timer > interval) {
 				decrease ();
+				targetflash (target,Color.red);
 				newtarget ();
 			}
 		}
@@ -119,14 +133,29 @@ public class foundassets : MonoBehaviour {
 
 	}
 
+	void targetpop(int t){
+		for (int j = 0; j < col[t].Count; j++) {
+			col [t] [j].GetComponent<SpriteRenderer> ().color = Color.white;
+			col [t][j].transform.localScale = Vector3.one * 1.3f;
+			col [t] [j].transform.DOScale (Vector3.one, 0.5f);
+		}
+	}
+
+	void targetflash(int t, Color c){
+		for (int j = 0; j < col[t].Count; j++) {
+			col [t][j].GetComponent<SpriteRenderer>().color=c;
+			col [t] [j].GetComponent<SpriteRenderer> ().DOColor (Color.white,0.75f);
+		}
+	}
+
 	void newtarget(){
 		int old = target;
 		target = Random.Range (0, 9);
-		for (int j = 0; j < col[old].Count; j++) {
-			col [old][j].GetComponent<SpriteRenderer>().color=Color.white;
-		}
+//		for (int j = 0; j < col[old].Count; j++) {
+//			col [old][j].GetComponent<SpriteRenderer>().color=Color.white;
+//		}
 		for (int j = 0; j < col[target].Count; j++) {
-			col [target] [j].GetComponent<SpriteRenderer>().color=new Color(1f,0f,0f,1f);
+			col [target] [j].GetComponent<SpriteRenderer>().color=new Color(0.5f,0.75f,1f,1f);
 		}
 		timer = 0;
 	}
