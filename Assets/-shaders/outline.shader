@@ -43,10 +43,10 @@ CGINCLUDE
 		v2f o;
 		o.pos = UnityObjectToClipPos(v.vertex);
 	 
-//		float3 norm   = mul ((float3x3)UNITY_MATRIX_IT_MV, v.normal);
-//		float2 offset = TransformViewToProjection(norm.xy);
-//	 
-//		o.pos.xy += offset * o.pos.z * _Outline;
+		float3 norm   = mul ((float3x3)UNITY_MATRIX_IT_MV, v.normal);
+		float2 offset = TransformViewToProjection(norm.xy);
+	 
+		o.pos.xy += offset * o.pos.z * _Outline;
 		o.color = _Color;
 		return o;
 	}

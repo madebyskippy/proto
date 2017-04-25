@@ -66,15 +66,7 @@ public class rings : MonoBehaviour {
 		float s = (1 - ratio + 0.5f) * size;
 		obj.transform.localScale = Vector3.one * Random.Range(s*0.75f, s);
 
-		if (i == 0) {
-			child.transform.localScale = Vector3.one * Random.Range (0.4f, 0.7f);
-		}else{
-			child.transform.localScale = objs[i-1].transform.localScale + Vector3.one*0.05f;//Vector3.one * Random.Range (0.4f, 0.7f);
-			//i want this so that the white always shows but i'mg enerating largest to smallest instead of the other way around
-			//so this doesn't work
-			//i have to fix it
-			//or figure out a way around it ??
-		}
+		child.transform.localScale = Vector3.one * Random.Range (0.7f, 0.95f);
 
 		float scale = obj.transform.localScale.x;
 		float scalei = child.transform.localScale.x;
@@ -86,11 +78,16 @@ public class rings : MonoBehaviour {
 //		sq.Append (temp.transform.DOScale (0f, interval * max*5f));
 
 		SpriteRenderer sr = obj.GetComponent<SpriteRenderer> ();
-		sr.sortingOrder = count * 2;
-		sr.color = Random.ColorHSV (0f,1f,1f,1f,.7f,.8f);
-		child.GetComponent<SpriteRenderer> ().sortingOrder = count * 2 + 1;
+		sr.color = Random.ColorHSV (0f,1f,0f,0.25f,0.6f,0.7f);
+//		sr.sortingOrder = count * 2;
+		child.GetComponent<SpriteRenderer> ().sortingOrder = 0;//count * 2 + 1;
+		Vector3 temp = obj.transform.position;
+		temp.z = 20f - count * 2f;
+		obj.transform.position = temp;
+		temp = child.transform.position;
+		temp.z = obj.transform.position.z-0.1f;
+		child.transform.position = temp;
 
-//		objs.Add (temp);
 	}
 
 	public void changeMax(float val){
