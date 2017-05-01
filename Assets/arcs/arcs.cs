@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class arcs : MonoBehaviour {
 
@@ -15,7 +16,9 @@ public class arcs : MonoBehaviour {
 	[SerializeField] Material m;
 
 	[SerializeField] GameObject mouse;
+	[SerializeField] Text text;
 
+	bool[,] ishit;
 	GameObject[,] colliders;
 	GameObject[,] circles;
 	Vector2[,] grid;
@@ -23,22 +26,32 @@ public class arcs : MonoBehaviour {
 	int r = 10;
 	int c = 10;
 
+	float increment = 0.01f; //change this to speed up the warping
+
 	LineRenderer[] lr_r;
 	LineRenderer[] lr_c;
 	Vector3[][] rows;
 	Vector3[][] cols;
 
+	int count;
+
 	bool gameover;
 	bool win;
 
+	float score;
+
 	// Use this for initialization
 	void Start () {
+		score = 0;
+		count = 0;
+		text.text = "touch each square";
 		gameover = false;
 		win = false;
 		grid = new Vector2[r, c];
 		changes = new Vector2[r, c];
 		circles = new GameObject[r, c];
 		colliders = new GameObject[r-1, c-1];
+		ishit = new bool[r - 1, c - 1];
 		lr_r = new LineRenderer[r];
 		lr_c = new LineRenderer[c];
 		rows = new Vector3[r][];
@@ -56,8 +69,11 @@ public class arcs : MonoBehaviour {
 				grid [i, j] = new Vector2 (start.x + i, start.y - j);
 				changes [i, j] = Vector2.zero;
 				circles[i,j] = Instantiate (circ, grid [i, j], Quaternion.identity);
-				if (i>0 && j<c-1)
-					colliders [i-1, j] = Instantiate (poly, grid [i, j], Quaternion.identity);
+				if (i > 0 && j < c - 1) {
+					colliders [i - 1, j] = Instantiate (poly, grid [i, j], Quaternion.identity);
+					colliders [i - 1, j].GetComponent<arcpoly> ().setP (grid [i, j]);
+					ishit[i-1,j] = false;
+				}
 
 				lr_c [i].SetPosition (j,new Vector3(grid[i,j].x,grid[i,j].y,0f));
 				rows [i][j] = grid[i,j];
@@ -89,24 +105,37 @@ public class arcs : MonoBehaviour {
 			Application.Quit();
 		}
 
+
+
 		Vector3 temp = Camera.main.ScreenToWorldPoint (Input.mousePosition);
 		temp.z = 0;
 		mouse.transform.position = temp;
 
-		if (!gameover && !win) {
-			for (int j = 0; j < c; j++) {
-				for (int i = 0; i < r; i++) {
-					changes [i, j] = Vector2.one * Random.Range (-0.01f, 0.01f);
-					edit (i, j, grid [i, j] + changes[i,j]);
+		for (int j = 0; j < c; j++) {
+			for (int i = 0; i < r; i++) {
+				changes [i, j] = Vector2.one * Random.Range (-1f, 1f) * increment;
+				edit (i, j, grid [i, j] + changes[i,j]);
 
-				}
 			}
-
-			showlines ();
-			placecirc ();
-			adjustpoly ();
 		}
-		
+
+		showlines ();
+		placecirc ();
+		adjustpoly ();
+
+		if (!gameover && !win) {
+			
+			score += Time.deltaTime;
+			text.text = "touch each square\n\n" + ((int)score).ToString();
+
+
+		}
+		if (gameover) {
+			text.text = "don't touch the corners.\nspace to try again\n" + ((int)score).ToString ();
+		}
+		if (win) {
+			text.text = "amazing. do it again\n\n" + ((int)score).ToString ();
+		}
 	}
 
 	void edit(int x, int y, Vector2 p){
@@ -138,25 +167,12 @@ public class arcs : MonoBehaviour {
 				Vector3[] v3;
 				v2 = o.GetComponent<PolygonCollider2D> ().points;
 
-				v2 [0] = o.transform.InverseTransformPoint(grid [i-1,	j+1]);//-Vector2.one;
-				v2 [1] = o.transform.InverseTransformPoint(grid [i,		j]	);//-Vector2.one;
-				v2 [2] = o.transform.InverseTransformPoint(grid [i,		j+1]);//-Vector2.one;
+				v2 [0] = o.transform.InverseTransformPoint(grid [i,	j]);//-Vector2.one;
+				v2 [1] = o.transform.InverseTransformPoint(grid [i,		j+1]	);//-Vector2.one;
+				v2 [2] = o.transform.InverseTransformPoint(grid [i-1,		j+1]);//-Vector2.one;
 				v2 [3] = o.transform.InverseTransformPoint(grid [i-1,	j]	);//-Vector2.one;
 
 				o.GetComponent<PolygonCollider2D> ().points = v2;
-
-				if (i == 1 && j == 0) {
-					Debug.Log (colliders [i - 1, j].GetComponent<MeshFilter> ().mesh.vertices[0]);
-					Debug.Log (colliders [i - 1, j].GetComponent<MeshFilter> ().mesh.vertices[1]);
-					Debug.Log (colliders [i - 1, j].GetComponent<MeshFilter> ().mesh.vertices[2]);
-					Debug.Log (colliders [i - 1, j].GetComponent<MeshFilter> ().mesh.vertices[3]);
-					Debug.Log (colliders [i - 1, j].GetComponent<MeshFilter> ().mesh.triangles[0]);
-					Debug.Log (colliders [i - 1, j].GetComponent<MeshFilter> ().mesh.triangles[1]);
-					Debug.Log (colliders [i - 1, j].GetComponent<MeshFilter> ().mesh.triangles[2]);
-					Debug.Log (colliders [i - 1, j].GetComponent<MeshFilter> ().mesh.triangles[3]);
-					Debug.Log (colliders [i - 1, j].GetComponent<MeshFilter> ().mesh.triangles[4]);
-					Debug.Log (colliders [i - 1, j].GetComponent<MeshFilter> ().mesh.triangles[5]);
-				}
 				v3 = o.GetComponent<MeshFilter> ().mesh.vertices;
 				v3 [0] = o.transform.InverseTransformPoint((Vector3)grid [i-1,	j+1]);//-Vector3.one;
 				v3 [1] = o.transform.InverseTransformPoint((Vector3)grid [i, 	j]);//-Vector3.one;
@@ -168,13 +184,39 @@ public class arcs : MonoBehaviour {
 		}
 	}
 
-	public void hit(bool c, Collider2D col = null){
-		if (c) {
-			Debug.Log ("hit");
-			gameover = true;
-		} else {
-			//hit a poly collider, change its color??
-			col.GetComponent<MeshRenderer>().material = m;
+	public void hit(bool corner, Collider2D col = null){
+		if (!gameover && !win){
+			if (corner) {
+				Debug.Log ("hit");
+				if (!gameover) {
+					Camera.main.backgroundColor = new Color (0.9f,0.9f,0.9f);
+					gameover = true;
+					screenshot ();
+				}
+			} else {
+				if (!col.GetComponent<arcpoly> ().gethit ()) {
+//					Debug.Log ("hit");
+					count++;
+					col.GetComponent<arcpoly> ().hit ();
+					col.GetComponent<MeshRenderer> ().material = m;
+					if (count >= ((r - 1) * (c - 1)) && !win) {
+						win = true;
+						for (int i = 0; i < r; i++) {
+							lr_r [i].startColor = Color.white;
+							lr_r [i].endColor = Color.white;
+							lr_c [i].startColor = Color.white;
+							lr_c [i].endColor = Color.white;
+						}
+						screenshot ();
+					}
+				}
+			}
 		}
+	}
+
+	void screenshot(){
+		string temp = System.DateTime.Now.ToString("yyyyMMddHHmmss");
+		Debug.Log (temp);
+		Application.CaptureScreenshot("../Screenshot"+temp+".png");
 	}
 }
