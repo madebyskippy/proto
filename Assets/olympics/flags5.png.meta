@@ -1,0 +1,504 @@
+fileFormatVersion: 2
+guid: 67354c3b630bd41878cc35f4829b689c
+timeCreated: 1494025832
+licenseType: Free
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: flags5_0
+    21300002: flags5_1
+    21300004: flags5_2
+    21300006: flags5_3
+    21300008: flags5_4
+    21300010: flags5_5
+    21300012: flags5_6
+    21300014: flags5_7
+    21300016: flags5_8
+    21300018: flags5_9
+    21300020: flags5_10
+    21300022: flags5_11
+    21300024: flags5_12
+    21300026: flags5_13
+    21300028: flags5_14
+    21300030: flags5_15
+    21300032: flags5_16
+    21300034: flags5_17
+    21300036: flags5_18
+    21300038: flags5_19
+    21300040: flags5_20
+    21300042: flags5_21
+    21300044: flags5_22
+    21300046: flags5_23
+    21300048: flags5_24
+    21300050: flags5_25
+    21300052: flags5_26
+    21300054: flags5_27
+    21300056: flags5_28
+    21300058: flags5_29
+  serializedVersion: 4
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 1
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    filterMode: -1
+    aniso: 16
+    mipBias: -1
+    wrapMode: -1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 100
+  alphaUsage: 1
+  alphaIsTransparency: 0
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  platformSettings:
+  - buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+  - buildTarget: Standalone
+    maxTextureSize: 2048
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+  - buildTarget: WebGL
+    maxTextureSize: 2048
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: flags5_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1197
+        width: 180
+        height: 118
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: flags5_1
+      rect:
+        serializedVersion: 2
+        x: 350
+        y: 1197
+        width: 180
+        height: 118
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: flags5_2
+      rect:
+        serializedVersion: 2
+        x: 700
+        y: 1197
+        width: 180
+        height: 118
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: flags5_3
+      rect:
+        serializedVersion: 2
+        x: 1050
+        y: 1197
+        width: 180
+        height: 118
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: flags5_4
+      rect:
+        serializedVersion: 2
+        x: 1400
+        y: 1197
+        width: 180
+        height: 118
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: flags5_5
+      rect:
+        serializedVersion: 2
+        x: 1750
+        y: 1197
+        width: 180
+        height: 118
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: flags5_6
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 898
+        width: 180
+        height: 118
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: flags5_7
+      rect:
+        serializedVersion: 2
+        x: 350
+        y: 898
+        width: 180
+        height: 118
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: flags5_8
+      rect:
+        serializedVersion: 2
+        x: 700
+        y: 898
+        width: 180
+        height: 118
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: flags5_9
+      rect:
+        serializedVersion: 2
+        x: 1050
+        y: 898
+        width: 180
+        height: 118
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: flags5_10
+      rect:
+        serializedVersion: 2
+        x: 1400
+        y: 898
+        width: 180
+        height: 118
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: flags5_11
+      rect:
+        serializedVersion: 2
+        x: 1750
+        y: 898
+        width: 180
+        height: 118
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: flags5_12
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 599
+        width: 180
+        height: 118
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: flags5_13
+      rect:
+        serializedVersion: 2
+        x: 350
+        y: 599
+        width: 180
+        height: 118
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: flags5_14
+      rect:
+        serializedVersion: 2
+        x: 700
+        y: 599
+        width: 180
+        height: 118
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: flags5_15
+      rect:
+        serializedVersion: 2
+        x: 1050
+        y: 599
+        width: 180
+        height: 118
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: flags5_16
+      rect:
+        serializedVersion: 2
+        x: 1400
+        y: 599
+        width: 180
+        height: 118
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: flags5_17
+      rect:
+        serializedVersion: 2
+        x: 1750
+        y: 599
+        width: 180
+        height: 118
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: flags5_18
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 300
+        width: 180
+        height: 118
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: flags5_19
+      rect:
+        serializedVersion: 2
+        x: 350
+        y: 300
+        width: 180
+        height: 118
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: flags5_20
+      rect:
+        serializedVersion: 2
+        x: 700
+        y: 300
+        width: 180
+        height: 118
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: flags5_21
+      rect:
+        serializedVersion: 2
+        x: 1050
+        y: 300
+        width: 180
+        height: 118
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: flags5_22
+      rect:
+        serializedVersion: 2
+        x: 1400
+        y: 300
+        width: 180
+        height: 118
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: flags5_23
+      rect:
+        serializedVersion: 2
+        x: 1750
+        y: 300
+        width: 180
+        height: 118
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: flags5_24
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1
+        width: 180
+        height: 118
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: flags5_25
+      rect:
+        serializedVersion: 2
+        x: 350
+        y: 1
+        width: 180
+        height: 118
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: flags5_26
+      rect:
+        serializedVersion: 2
+        x: 700
+        y: 1
+        width: 180
+        height: 118
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: flags5_27
+      rect:
+        serializedVersion: 2
+        x: 1050
+        y: 1
+        width: 180
+        height: 118
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: flags5_28
+      rect:
+        serializedVersion: 2
+        x: 1400
+        y: 1
+        width: 180
+        height: 118
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: flags5_29
+      rect:
+        serializedVersion: 2
+        x: 1750
+        y: 1
+        width: 180
+        height: 118
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    outline: []
+  spritePackingTag: 
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

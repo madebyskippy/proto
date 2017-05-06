@@ -1,0 +1,4340 @@
+fileFormatVersion: 2
+guid: 8aad0554a78fe4c48ba9a7e85f3a440a
+timeCreated: 1494025516
+licenseType: Free
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: all_flags_0
+    21300002: all_flags_1
+    21300004: all_flags_2
+    21300006: all_flags_3
+    21300008: all_flags_4
+    21300010: all_flags_5
+    21300012: all_flags_6
+    21300014: all_flags_7
+    21300016: all_flags_8
+    21300018: all_flags_9
+    21300020: all_flags_10
+    21300022: all_flags_11
+    21300024: all_flags_12
+    21300026: all_flags_13
+    21300028: all_flags_14
+    21300030: all_flags_15
+    21300032: all_flags_16
+    21300034: all_flags_17
+    21300036: all_flags_18
+    21300038: all_flags_19
+    21300040: all_flags_20
+    21300042: all_flags_21
+    21300044: all_flags_22
+    21300046: all_flags_23
+    21300048: all_flags_24
+    21300050: all_flags_25
+    21300052: all_flags_26
+    21300054: all_flags_27
+    21300056: all_flags_28
+    21300058: all_flags_29
+    21300060: all_flags_30
+    21300062: all_flags_31
+    21300064: all_flags_32
+    21300066: all_flags_33
+    21300068: all_flags_34
+    21300070: all_flags_35
+    21300072: all_flags_36
+    21300074: all_flags_37
+    21300076: all_flags_38
+    21300078: all_flags_39
+    21300080: all_flags_40
+    21300082: all_flags_41
+    21300084: all_flags_42
+    21300086: all_flags_43
+    21300088: all_flags_44
+    21300090: all_flags_45
+    21300092: all_flags_46
+    21300094: all_flags_47
+    21300096: all_flags_48
+    21300098: all_flags_49
+    21300100: all_flags_50
+    21300102: all_flags_51
+    21300104: all_flags_52
+    21300106: all_flags_53
+    21300108: all_flags_54
+    21300110: all_flags_55
+    21300112: all_flags_56
+    21300114: all_flags_57
+    21300116: all_flags_58
+    21300118: all_flags_59
+    21300120: all_flags_60
+    21300122: all_flags_61
+    21300124: all_flags_62
+    21300126: all_flags_63
+    21300128: all_flags_64
+    21300130: all_flags_65
+    21300132: all_flags_66
+    21300134: all_flags_67
+    21300136: all_flags_68
+    21300138: all_flags_69
+    21300140: all_flags_70
+    21300142: all_flags_71
+    21300144: all_flags_72
+    21300146: all_flags_73
+    21300148: all_flags_74
+    21300150: all_flags_75
+    21300152: all_flags_76
+    21300154: all_flags_77
+    21300156: all_flags_78
+    21300158: all_flags_79
+    21300160: all_flags_80
+    21300162: all_flags_81
+    21300164: all_flags_82
+    21300166: all_flags_83
+    21300168: all_flags_84
+    21300170: all_flags_85
+    21300172: all_flags_86
+    21300174: all_flags_87
+    21300176: all_flags_88
+    21300178: all_flags_89
+    21300180: all_flags_90
+    21300182: all_flags_91
+    21300184: all_flags_92
+    21300186: all_flags_93
+    21300188: all_flags_94
+    21300190: all_flags_95
+    21300192: all_flags_96
+    21300194: all_flags_97
+    21300196: all_flags_98
+    21300198: all_flags_99
+    21300200: all_flags_100
+    21300202: all_flags_101
+    21300204: all_flags_102
+    21300206: all_flags_103
+    21300208: all_flags_104
+    21300210: all_flags_105
+    21300212: all_flags_106
+    21300214: all_flags_107
+    21300216: all_flags_108
+    21300218: all_flags_109
+    21300220: all_flags_110
+    21300222: all_flags_111
+    21300224: all_flags_112
+    21300226: all_flags_113
+    21300228: all_flags_114
+    21300230: all_flags_115
+    21300232: all_flags_116
+    21300234: all_flags_117
+    21300236: all_flags_118
+    21300238: all_flags_119
+    21300240: all_flags_120
+    21300242: all_flags_121
+    21300244: all_flags_122
+    21300246: all_flags_123
+    21300248: all_flags_124
+    21300250: all_flags_125
+    21300252: all_flags_126
+    21300254: all_flags_127
+    21300256: all_flags_128
+    21300258: all_flags_129
+    21300260: all_flags_130
+    21300262: all_flags_131
+    21300264: all_flags_132
+    21300266: all_flags_133
+    21300268: all_flags_134
+    21300270: all_flags_135
+    21300272: all_flags_136
+    21300274: all_flags_137
+    21300276: all_flags_138
+    21300278: all_flags_139
+    21300280: all_flags_140
+    21300282: all_flags_141
+    21300284: all_flags_142
+    21300286: all_flags_143
+    21300288: all_flags_144
+    21300290: all_flags_145
+    21300292: all_flags_146
+    21300294: all_flags_147
+    21300296: all_flags_148
+    21300298: all_flags_149
+    21300300: all_flags_150
+    21300302: all_flags_151
+    21300304: all_flags_152
+    21300306: all_flags_153
+    21300308: all_flags_154
+    21300310: all_flags_155
+    21300312: all_flags_156
+    21300314: all_flags_157
+    21300316: all_flags_158
+    21300318: all_flags_159
+    21300320: all_flags_160
+    21300322: all_flags_161
+    21300324: all_flags_162
+    21300326: all_flags_163
+    21300328: all_flags_164
+    21300330: all_flags_165
+    21300332: all_flags_166
+    21300334: all_flags_167
+    21300336: all_flags_168
+    21300338: all_flags_169
+    21300340: all_flags_170
+    21300342: all_flags_171
+    21300344: all_flags_172
+    21300346: all_flags_173
+    21300348: all_flags_174
+    21300350: all_flags_175
+    21300352: all_flags_176
+    21300354: all_flags_177
+    21300356: all_flags_178
+    21300358: all_flags_179
+    21300360: all_flags_180
+    21300362: all_flags_181
+    21300364: all_flags_182
+    21300366: all_flags_183
+    21300368: all_flags_184
+    21300370: all_flags_185
+    21300372: all_flags_186
+    21300374: all_flags_187
+    21300376: all_flags_188
+    21300378: all_flags_189
+    21300380: all_flags_190
+    21300382: all_flags_191
+    21300384: all_flags_192
+    21300386: all_flags_193
+    21300388: all_flags_194
+    21300390: all_flags_195
+    21300392: all_flags_196
+    21300394: all_flags_197
+    21300396: all_flags_198
+    21300398: all_flags_199
+    21300400: all_flags_200
+    21300402: all_flags_201
+    21300404: all_flags_202
+    21300406: all_flags_203
+    21300408: all_flags_204
+    21300410: all_flags_205
+    21300412: all_flags_206
+    21300414: all_flags_207
+    21300416: all_flags_208
+    21300418: all_flags_209
+    21300420: all_flags_210
+    21300422: all_flags_211
+    21300424: all_flags_212
+    21300426: all_flags_213
+    21300428: all_flags_214
+    21300430: all_flags_215
+    21300432: all_flags_216
+    21300434: all_flags_217
+    21300436: all_flags_218
+    21300438: all_flags_219
+    21300440: all_flags_220
+    21300442: all_flags_221
+    21300444: all_flags_222
+    21300446: all_flags_223
+    21300448: all_flags_224
+    21300450: all_flags_225
+    21300452: all_flags_226
+    21300454: all_flags_227
+    21300456: all_flags_228
+    21300458: all_flags_229
+    21300460: all_flags_230
+    21300462: all_flags_231
+    21300464: all_flags_232
+    21300466: all_flags_233
+    21300468: all_flags_234
+    21300470: all_flags_235
+    21300472: all_flags_236
+    21300474: all_flags_237
+    21300476: all_flags_238
+    21300478: all_flags_239
+    21300480: all_flags_240
+    21300482: all_flags_241
+    21300484: all_flags_242
+    21300486: all_flags_243
+    21300488: all_flags_244
+    21300490: all_flags_245
+    21300492: all_flags_246
+    21300494: all_flags_247
+    21300496: all_flags_248
+    21300498: all_flags_249
+    21300500: all_flags_250
+    21300502: all_flags_251
+    21300504: all_flags_252
+    21300506: all_flags_253
+    21300508: all_flags_254
+    21300510: all_flags_255
+    21300512: all_flags_256
+    21300514: all_flags_257
+    21300516: all_flags_258
+    21300518: all_flags_259
+    21300520: all_flags_260
+    21300522: all_flags_261
+    21300524: all_flags_262
+    21300526: all_flags_263
+    21300528: all_flags_264
+    21300530: all_flags_265
+    21300532: all_flags_266
+    21300534: all_flags_267
+    21300536: all_flags_268
+    21300538: all_flags_269
+    21300540: all_flags_270
+    21300542: all_flags_271
+    21300544: all_flags_272
+    21300546: all_flags_273
+    21300548: all_flags_274
+    21300550: all_flags_275
+    21300552: all_flags_276
+    21300554: all_flags_277
+    21300556: all_flags_278
+    21300558: all_flags_279
+    21300560: all_flags_280
+    21300562: all_flags_281
+    21300564: all_flags_282
+    21300566: all_flags_283
+    21300568: all_flags_284
+    21300570: all_flags_285
+    21300572: all_flags_286
+    21300574: all_flags_287
+    21300576: all_flags_288
+    21300578: all_flags_289
+    21300580: all_flags_290
+    21300582: all_flags_291
+    21300584: all_flags_292
+    21300586: all_flags_293
+    21300588: all_flags_294
+    21300590: all_flags_295
+    21300592: all_flags_296
+    21300594: all_flags_297
+    21300596: all_flags_298
+    21300598: all_flags_299
+    21300600: all_flags_300
+    21300602: all_flags_301
+    21300604: all_flags_302
+    21300606: all_flags_303
+  serializedVersion: 4
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 1
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    filterMode: -1
+    aniso: 16
+    mipBias: -1
+    wrapMode: -1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 100
+  alphaUsage: 1
+  alphaIsTransparency: 0
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  platformSettings:
+  - buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+  - buildTarget: Standalone
+    maxTextureSize: 2048
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+  - buildTarget: WebGL
+    maxTextureSize: 2048
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: all_flags_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2529
+        width: 170
+        height: 110
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: all_flags_1
+      rect:
+        serializedVersion: 2
+        x: 230
+        y: 2529
+        width: 170
+        height: 110
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: all_flags_2
+      rect:
+        serializedVersion: 2
+        x: 460
+        y: 2529
+        width: 170
+        height: 110
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: all_flags_3
+      rect:
+        serializedVersion: 2
+        x: 690
+        y: 2529
+        width: 170
+        height: 110
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: all_flags_4
+      rect:
+        serializedVersion: 2
+        x: 920
+        y: 2529
+        width: 170
+        height: 110
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: all_flags_5
+      rect:
+        serializedVersion: 2
+        x: 1150
+        y: 2529
+        width: 170
+        height: 110
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: all_flags_6
+      rect:
+        serializedVersion: 2
+        x: 1380
+        y: 2529
+        width: 170
+        height: 110
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: all_flags_7
+      rect:
+        serializedVersion: 2
+        x: 1610
+        y: 2529
+        width: 170
+        height: 110
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: all_flags_8
+      rect:
+        serializedVersion: 2
+        x: 1840
+        y: 2529
+        width: 170
+        height: 110
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: all_flags_9
+      rect:
+        serializedVersion: 2
+        x: 2070
+        y: 2529
+        width: 170
+        height: 110
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: all_flags_10
+      rect:
+        serializedVersion: 2
+        x: 2300
+        y: 2529
+        width: 170
+        height: 110
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: all_flags_11
+      rect:
+        serializedVersion: 2
+        x: 2530
+        y: 2529
+        width: 170
+        height: 110
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: all_flags_12
+      rect:
+        serializedVersion: 2
+        x: 2760
+        y: 2529
+        width: 170
+        height: 110
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: all_flags_13
+      rect:
+        serializedVersion: 2
+        x: 2990
+        y: 2529
+        width: 170
+        height: 110
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: all_flags_14
+      rect:
+        serializedVersion: 2
+        x: 3220
+        y: 2529
+        width: 170
+        height: 110
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: all_flags_15
+      rect:
+        serializedVersion: 2
+        x: 3450
+        y: 2529
+        width: 170
+        height: 110
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: all_flags_16
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2374
+        width: 170
+        height: 110
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: all_flags_17
+      rect:
+        serializedVersion: 2
+        x: 230
+        y: 2389
+        width: 170
+        height: 110
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: all_flags_18
+      rect:
+        serializedVersion: 2
+        x: 460
+        y: 2389
+        width: 170
+        height: 110
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: all_flags_19
+      rect:
+        serializedVersion: 2
+        x: 690
+        y: 2389
+        width: 170
+        height: 110
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: all_flags_20
+      rect:
+        serializedVersion: 2
+        x: 920
+        y: 2389
+        width: 170
+        height: 110
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: all_flags_21
+      rect:
+        serializedVersion: 2
+        x: 1150
+        y: 2389
+        width: 170
+        height: 110
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: all_flags_22
+      rect:
+        serializedVersion: 2
+        x: 1380
+        y: 2389
+        width: 170
+        height: 110
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: all_flags_23
+      rect:
+        serializedVersion: 2
+        x: 1610
+        y: 2389
+        width: 170
+        height: 110
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: all_flags_24
+      rect:
+        serializedVersion: 2
+        x: 1840
+        y: 2389
+        width: 170
+        height: 110
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: all_flags_25
+      rect:
+        serializedVersion: 2
+        x: 2070
+        y: 2389
+        width: 170
+        height: 110
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: all_flags_26
+      rect:
+        serializedVersion: 2
+        x: 2300
+        y: 2389
+        width: 170
+        height: 110
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: all_flags_27
+      rect:
+        serializedVersion: 2
+        x: 2530
+        y: 2389
+        width: 170
+        height: 110
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: all_flags_28
+      rect:
+        serializedVersion: 2
+        x: 2760
+        y: 2389
+        width: 170
+        height: 110
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: all_flags_29
+      rect:
+        serializedVersion: 2
+        x: 2990
+        y: 2389
+        width: 170
+        height: 110
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: all_flags_30
+      rect:
+        serializedVersion: 2
+        x: 3220
+        y: 2389
+        width: 170
+        height: 110
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: all_flags_31
+      rect:
+        serializedVersion: 2
+        x: 3450
+        y: 2389
+        width: 170
+        height: 110
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: all_flags_32
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2249
+        width: 170
+        height: 110
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: all_flags_33
+      rect:
+        serializedVersion: 2
+        x: 230
+        y: 2249
+        width: 170
+        height: 110
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: all_flags_34
+      rect:
+        serializedVersion: 2
+        x: 460
+        y: 2249
+        width: 170
+        height: 110
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: all_flags_35
+      rect:
+        serializedVersion: 2
+        x: 690
+        y: 2249
+        width: 170
+        height: 110
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: all_flags_36
+      rect:
+        serializedVersion: 2
+        x: 920
+        y: 2249
+        width: 170
+        height: 110
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: all_flags_37
+      rect:
+        serializedVersion: 2
+        x: 1150
+        y: 2249
+        width: 170
+        height: 110
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: all_flags_38
+      rect:
+        serializedVersion: 2
+        x: 1380
+        y: 2249
+        width: 170
+        height: 110
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: all_flags_39
+      rect:
+        serializedVersion: 2
+        x: 1610
+        y: 2249
+        width: 170
+        height: 110
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: all_flags_40
+      rect:
+        serializedVersion: 2
+        x: 1840
+        y: 2249
+        width: 170
+        height: 110
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: all_flags_41
+      rect:
+        serializedVersion: 2
+        x: 2070
+        y: 2249
+        width: 170
+        height: 110
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: all_flags_42
+      rect:
+        serializedVersion: 2
+        x: 2300
+        y: 2249
+        width: 170
+        height: 110
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: all_flags_43
+      rect:
+        serializedVersion: 2
+        x: 2530
+        y: 2249
+        width: 170
+        height: 110
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: all_flags_44
+      rect:
+        serializedVersion: 2
+        x: 2760
+        y: 2249
+        width: 170
+        height: 110
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: all_flags_45
+      rect:
+        serializedVersion: 2
+        x: 2990
+        y: 2249
+        width: 170
+        height: 110
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: all_flags_46
+      rect:
+        serializedVersion: 2
+        x: 3220
+        y: 2249
+        width: 170
+        height: 110
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: all_flags_47
+      rect:
+        serializedVersion: 2
+        x: 3450
+        y: 2249
+        width: 170
+        height: 110
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: all_flags_48
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2109
+        width: 170
+        height: 110
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: all_flags_49
+      rect:
+        serializedVersion: 2
+        x: 230
+        y: 2109
+        width: 170
+        height: 110
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: all_flags_50
+      rect:
+        serializedVersion: 2
+        x: 460
+        y: 2109
+        width: 170
+        height: 110
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: all_flags_51
+      rect:
+        serializedVersion: 2
+        x: 690
+        y: 2109
+        width: 170
+        height: 110
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: all_flags_52
+      rect:
+        serializedVersion: 2
+        x: 920
+        y: 2109
+        width: 170
+        height: 110
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: all_flags_53
+      rect:
+        serializedVersion: 2
+        x: 1150
+        y: 2109
+        width: 170
+        height: 110
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: all_flags_54
+      rect:
+        serializedVersion: 2
+        x: 1380
+        y: 2109
+        width: 170
+        height: 110
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: all_flags_55
+      rect:
+        serializedVersion: 2
+        x: 1610
+        y: 2109
+        width: 170
+        height: 110
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: all_flags_56
+      rect:
+        serializedVersion: 2
+        x: 1840
+        y: 2109
+        width: 170
+        height: 110
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: all_flags_57
+      rect:
+        serializedVersion: 2
+        x: 2070
+        y: 2109
+        width: 170
+        height: 110
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: all_flags_58
+      rect:
+        serializedVersion: 2
+        x: 2300
+        y: 2109
+        width: 170
+        height: 110
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: all_flags_59
+      rect:
+        serializedVersion: 2
+        x: 2530
+        y: 2109
+        width: 170
+        height: 110
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: all_flags_60
+      rect:
+        serializedVersion: 2
+        x: 2760
+        y: 2109
+        width: 170
+        height: 110
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: all_flags_61
+      rect:
+        serializedVersion: 2
+        x: 2990
+        y: 2109
+        width: 170
+        height: 110
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: all_flags_62
+      rect:
+        serializedVersion: 2
+        x: 3220
+        y: 2109
+        width: 170
+        height: 110
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: all_flags_63
+      rect:
+        serializedVersion: 2
+        x: 3450
+        y: 2109
+        width: 170
+        height: 110
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: all_flags_64
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1969
+        width: 170
+        height: 110
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: all_flags_65
+      rect:
+        serializedVersion: 2
+        x: 230
+        y: 1969
+        width: 170
+        height: 110
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: all_flags_66
+      rect:
+        serializedVersion: 2
+        x: 460
+        y: 1969
+        width: 170
+        height: 110
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: all_flags_67
+      rect:
+        serializedVersion: 2
+        x: 690
+        y: 1969
+        width: 170
+        height: 110
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: all_flags_68
+      rect:
+        serializedVersion: 2
+        x: 920
+        y: 1969
+        width: 170
+        height: 110
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: all_flags_69
+      rect:
+        serializedVersion: 2
+        x: 1150
+        y: 1969
+        width: 170
+        height: 110
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: all_flags_70
+      rect:
+        serializedVersion: 2
+        x: 1380
+        y: 1969
+        width: 170
+        height: 110
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: all_flags_71
+      rect:
+        serializedVersion: 2
+        x: 1610
+        y: 1969
+        width: 170
+        height: 110
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: all_flags_72
+      rect:
+        serializedVersion: 2
+        x: 1840
+        y: 1969
+        width: 170
+        height: 110
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: all_flags_73
+      rect:
+        serializedVersion: 2
+        x: 2070
+        y: 1969
+        width: 170
+        height: 110
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: all_flags_74
+      rect:
+        serializedVersion: 2
+        x: 2300
+        y: 1969
+        width: 170
+        height: 110
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: all_flags_75
+      rect:
+        serializedVersion: 2
+        x: 2530
+        y: 1969
+        width: 170
+        height: 110
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: all_flags_76
+      rect:
+        serializedVersion: 2
+        x: 2760
+        y: 1969
+        width: 170
+        height: 110
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: all_flags_77
+      rect:
+        serializedVersion: 2
+        x: 2990
+        y: 1969
+        width: 170
+        height: 110
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: all_flags_78
+      rect:
+        serializedVersion: 2
+        x: 3220
+        y: 1969
+        width: 170
+        height: 110
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: all_flags_79
+      rect:
+        serializedVersion: 2
+        x: 3450
+        y: 1969
+        width: 170
+        height: 110
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: all_flags_80
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1829
+        width: 170
+        height: 110
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: all_flags_81
+      rect:
+        serializedVersion: 2
+        x: 230
+        y: 1829
+        width: 170
+        height: 110
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: all_flags_82
+      rect:
+        serializedVersion: 2
+        x: 460
+        y: 1829
+        width: 170
+        height: 110
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: all_flags_83
+      rect:
+        serializedVersion: 2
+        x: 690
+        y: 1829
+        width: 170
+        height: 110
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: all_flags_84
+      rect:
+        serializedVersion: 2
+        x: 920
+        y: 1829
+        width: 170
+        height: 110
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: all_flags_85
+      rect:
+        serializedVersion: 2
+        x: 1150
+        y: 1829
+        width: 170
+        height: 110
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: all_flags_86
+      rect:
+        serializedVersion: 2
+        x: 1380
+        y: 1829
+        width: 170
+        height: 110
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: all_flags_87
+      rect:
+        serializedVersion: 2
+        x: 1610
+        y: 1829
+        width: 170
+        height: 110
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: all_flags_88
+      rect:
+        serializedVersion: 2
+        x: 1840
+        y: 1829
+        width: 170
+        height: 110
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: all_flags_89
+      rect:
+        serializedVersion: 2
+        x: 2070
+        y: 1829
+        width: 170
+        height: 110
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: all_flags_90
+      rect:
+        serializedVersion: 2
+        x: 2300
+        y: 1829
+        width: 170
+        height: 110
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: all_flags_91
+      rect:
+        serializedVersion: 2
+        x: 2530
+        y: 1829
+        width: 170
+        height: 110
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: all_flags_92
+      rect:
+        serializedVersion: 2
+        x: 2760
+        y: 1829
+        width: 170
+        height: 110
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: all_flags_93
+      rect:
+        serializedVersion: 2
+        x: 2990
+        y: 1829
+        width: 170
+        height: 110
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: all_flags_94
+      rect:
+        serializedVersion: 2
+        x: 3220
+        y: 1829
+        width: 170
+        height: 110
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: all_flags_95
+      rect:
+        serializedVersion: 2
+        x: 3450
+        y: 1829
+        width: 170
+        height: 110
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: all_flags_96
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1689
+        width: 170
+        height: 110
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: all_flags_97
+      rect:
+        serializedVersion: 2
+        x: 230
+        y: 1689
+        width: 170
+        height: 110
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: all_flags_98
+      rect:
+        serializedVersion: 2
+        x: 460
+        y: 1689
+        width: 170
+        height: 110
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: all_flags_99
+      rect:
+        serializedVersion: 2
+        x: 690
+        y: 1689
+        width: 170
+        height: 110
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: all_flags_100
+      rect:
+        serializedVersion: 2
+        x: 920
+        y: 1689
+        width: 170
+        height: 110
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: all_flags_101
+      rect:
+        serializedVersion: 2
+        x: 1150
+        y: 1689
+        width: 170
+        height: 110
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: all_flags_102
+      rect:
+        serializedVersion: 2
+        x: 1380
+        y: 1689
+        width: 170
+        height: 110
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: all_flags_103
+      rect:
+        serializedVersion: 2
+        x: 1610
+        y: 1689
+        width: 170
+        height: 110
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: all_flags_104
+      rect:
+        serializedVersion: 2
+        x: 1840
+        y: 1689
+        width: 170
+        height: 110
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: all_flags_105
+      rect:
+        serializedVersion: 2
+        x: 2070
+        y: 1689
+        width: 170
+        height: 110
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: all_flags_106
+      rect:
+        serializedVersion: 2
+        x: 2300
+        y: 1689
+        width: 170
+        height: 110
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: all_flags_107
+      rect:
+        serializedVersion: 2
+        x: 2530
+        y: 1689
+        width: 170
+        height: 110
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: all_flags_108
+      rect:
+        serializedVersion: 2
+        x: 2760
+        y: 1689
+        width: 170
+        height: 110
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: all_flags_109
+      rect:
+        serializedVersion: 2
+        x: 2990
+        y: 1689
+        width: 170
+        height: 110
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: all_flags_110
+      rect:
+        serializedVersion: 2
+        x: 3220
+        y: 1689
+        width: 170
+        height: 110
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: all_flags_111
+      rect:
+        serializedVersion: 2
+        x: 3450
+        y: 1689
+        width: 170
+        height: 110
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: all_flags_112
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1549
+        width: 170
+        height: 110
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: all_flags_113
+      rect:
+        serializedVersion: 2
+        x: 230
+        y: 1549
+        width: 170
+        height: 110
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: all_flags_114
+      rect:
+        serializedVersion: 2
+        x: 460
+        y: 1549
+        width: 170
+        height: 110
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: all_flags_115
+      rect:
+        serializedVersion: 2
+        x: 690
+        y: 1549
+        width: 170
+        height: 110
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: all_flags_116
+      rect:
+        serializedVersion: 2
+        x: 920
+        y: 1549
+        width: 170
+        height: 110
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: all_flags_117
+      rect:
+        serializedVersion: 2
+        x: 1150
+        y: 1549
+        width: 170
+        height: 110
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: all_flags_118
+      rect:
+        serializedVersion: 2
+        x: 1380
+        y: 1549
+        width: 170
+        height: 110
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: all_flags_119
+      rect:
+        serializedVersion: 2
+        x: 1610
+        y: 1549
+        width: 170
+        height: 110
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: all_flags_120
+      rect:
+        serializedVersion: 2
+        x: 1840
+        y: 1549
+        width: 170
+        height: 110
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: all_flags_121
+      rect:
+        serializedVersion: 2
+        x: 2070
+        y: 1549
+        width: 170
+        height: 110
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: all_flags_122
+      rect:
+        serializedVersion: 2
+        x: 2300
+        y: 1549
+        width: 170
+        height: 110
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: all_flags_123
+      rect:
+        serializedVersion: 2
+        x: 2530
+        y: 1549
+        width: 170
+        height: 110
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: all_flags_124
+      rect:
+        serializedVersion: 2
+        x: 2760
+        y: 1549
+        width: 170
+        height: 110
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: all_flags_125
+      rect:
+        serializedVersion: 2
+        x: 2990
+        y: 1549
+        width: 170
+        height: 110
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: all_flags_126
+      rect:
+        serializedVersion: 2
+        x: 3220
+        y: 1549
+        width: 170
+        height: 110
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: all_flags_127
+      rect:
+        serializedVersion: 2
+        x: 3450
+        y: 1549
+        width: 170
+        height: 110
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: all_flags_128
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1409
+        width: 170
+        height: 110
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: all_flags_129
+      rect:
+        serializedVersion: 2
+        x: 230
+        y: 1409
+        width: 170
+        height: 110
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: all_flags_130
+      rect:
+        serializedVersion: 2
+        x: 460
+        y: 1409
+        width: 170
+        height: 110
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: all_flags_131
+      rect:
+        serializedVersion: 2
+        x: 690
+        y: 1409
+        width: 170
+        height: 110
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: all_flags_132
+      rect:
+        serializedVersion: 2
+        x: 920
+        y: 1409
+        width: 170
+        height: 110
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: all_flags_133
+      rect:
+        serializedVersion: 2
+        x: 1150
+        y: 1409
+        width: 170
+        height: 110
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: all_flags_134
+      rect:
+        serializedVersion: 2
+        x: 1380
+        y: 1409
+        width: 170
+        height: 110
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: all_flags_135
+      rect:
+        serializedVersion: 2
+        x: 1610
+        y: 1409
+        width: 170
+        height: 110
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: all_flags_136
+      rect:
+        serializedVersion: 2
+        x: 1840
+        y: 1409
+        width: 170
+        height: 110
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: all_flags_137
+      rect:
+        serializedVersion: 2
+        x: 2070
+        y: 1409
+        width: 170
+        height: 110
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: all_flags_138
+      rect:
+        serializedVersion: 2
+        x: 2300
+        y: 1409
+        width: 170
+        height: 110
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: all_flags_139
+      rect:
+        serializedVersion: 2
+        x: 2530
+        y: 1409
+        width: 170
+        height: 110
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: all_flags_140
+      rect:
+        serializedVersion: 2
+        x: 2760
+        y: 1409
+        width: 170
+        height: 110
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: all_flags_141
+      rect:
+        serializedVersion: 2
+        x: 2990
+        y: 1409
+        width: 170
+        height: 110
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: all_flags_142
+      rect:
+        serializedVersion: 2
+        x: 3220
+        y: 1409
+        width: 170
+        height: 110
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: all_flags_143
+      rect:
+        serializedVersion: 2
+        x: 3450
+        y: 1409
+        width: 170
+        height: 110
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: all_flags_144
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1269
+        width: 170
+        height: 110
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: all_flags_145
+      rect:
+        serializedVersion: 2
+        x: 230
+        y: 1269
+        width: 170
+        height: 110
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: all_flags_146
+      rect:
+        serializedVersion: 2
+        x: 460
+        y: 1269
+        width: 170
+        height: 110
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: all_flags_147
+      rect:
+        serializedVersion: 2
+        x: 690
+        y: 1269
+        width: 170
+        height: 110
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: all_flags_148
+      rect:
+        serializedVersion: 2
+        x: 920
+        y: 1269
+        width: 170
+        height: 110
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: all_flags_149
+      rect:
+        serializedVersion: 2
+        x: 1150
+        y: 1269
+        width: 170
+        height: 110
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: all_flags_150
+      rect:
+        serializedVersion: 2
+        x: 1380
+        y: 1269
+        width: 170
+        height: 110
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: all_flags_151
+      rect:
+        serializedVersion: 2
+        x: 1610
+        y: 1269
+        width: 170
+        height: 110
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: all_flags_152
+      rect:
+        serializedVersion: 2
+        x: 1840
+        y: 1269
+        width: 170
+        height: 110
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: all_flags_153
+      rect:
+        serializedVersion: 2
+        x: 2070
+        y: 1269
+        width: 170
+        height: 110
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: all_flags_154
+      rect:
+        serializedVersion: 2
+        x: 2300
+        y: 1269
+        width: 170
+        height: 110
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: all_flags_155
+      rect:
+        serializedVersion: 2
+        x: 2530
+        y: 1269
+        width: 170
+        height: 110
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: all_flags_156
+      rect:
+        serializedVersion: 2
+        x: 2760
+        y: 1269
+        width: 170
+        height: 110
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: all_flags_157
+      rect:
+        serializedVersion: 2
+        x: 2990
+        y: 1269
+        width: 170
+        height: 110
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: all_flags_158
+      rect:
+        serializedVersion: 2
+        x: 3220
+        y: 1269
+        width: 170
+        height: 110
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: all_flags_159
+      rect:
+        serializedVersion: 2
+        x: 3450
+        y: 1269
+        width: 170
+        height: 110
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: all_flags_160
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1129
+        width: 170
+        height: 110
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: all_flags_161
+      rect:
+        serializedVersion: 2
+        x: 230
+        y: 1129
+        width: 170
+        height: 110
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: all_flags_162
+      rect:
+        serializedVersion: 2
+        x: 460
+        y: 1129
+        width: 170
+        height: 110
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: all_flags_163
+      rect:
+        serializedVersion: 2
+        x: 690
+        y: 1129
+        width: 170
+        height: 110
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: all_flags_164
+      rect:
+        serializedVersion: 2
+        x: 920
+        y: 1129
+        width: 170
+        height: 110
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: all_flags_165
+      rect:
+        serializedVersion: 2
+        x: 1150
+        y: 1129
+        width: 170
+        height: 110
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: all_flags_166
+      rect:
+        serializedVersion: 2
+        x: 1380
+        y: 1129
+        width: 170
+        height: 110
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: all_flags_167
+      rect:
+        serializedVersion: 2
+        x: 1610
+        y: 1129
+        width: 170
+        height: 110
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: all_flags_168
+      rect:
+        serializedVersion: 2
+        x: 1840
+        y: 1129
+        width: 170
+        height: 110
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: all_flags_169
+      rect:
+        serializedVersion: 2
+        x: 2070
+        y: 1129
+        width: 170
+        height: 110
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: all_flags_170
+      rect:
+        serializedVersion: 2
+        x: 2300
+        y: 1129
+        width: 170
+        height: 110
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: all_flags_171
+      rect:
+        serializedVersion: 2
+        x: 2530
+        y: 1129
+        width: 170
+        height: 110
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: all_flags_172
+      rect:
+        serializedVersion: 2
+        x: 2760
+        y: 1129
+        width: 170
+        height: 110
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: all_flags_173
+      rect:
+        serializedVersion: 2
+        x: 2990
+        y: 1129
+        width: 170
+        height: 110
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: all_flags_174
+      rect:
+        serializedVersion: 2
+        x: 3220
+        y: 1129
+        width: 170
+        height: 110
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: all_flags_175
+      rect:
+        serializedVersion: 2
+        x: 3450
+        y: 1129
+        width: 170
+        height: 110
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: all_flags_176
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 989
+        width: 170
+        height: 110
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: all_flags_177
+      rect:
+        serializedVersion: 2
+        x: 230
+        y: 989
+        width: 170
+        height: 110
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: all_flags_178
+      rect:
+        serializedVersion: 2
+        x: 460
+        y: 989
+        width: 170
+        height: 110
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: all_flags_179
+      rect:
+        serializedVersion: 2
+        x: 690
+        y: 989
+        width: 170
+        height: 110
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: all_flags_180
+      rect:
+        serializedVersion: 2
+        x: 920
+        y: 989
+        width: 170
+        height: 110
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: all_flags_181
+      rect:
+        serializedVersion: 2
+        x: 1150
+        y: 989
+        width: 170
+        height: 110
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: all_flags_182
+      rect:
+        serializedVersion: 2
+        x: 1380
+        y: 989
+        width: 170
+        height: 110
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: all_flags_183
+      rect:
+        serializedVersion: 2
+        x: 1610
+        y: 989
+        width: 170
+        height: 110
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: all_flags_184
+      rect:
+        serializedVersion: 2
+        x: 1840
+        y: 989
+        width: 170
+        height: 110
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: all_flags_185
+      rect:
+        serializedVersion: 2
+        x: 2070
+        y: 989
+        width: 170
+        height: 110
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: all_flags_186
+      rect:
+        serializedVersion: 2
+        x: 2300
+        y: 989
+        width: 170
+        height: 110
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: all_flags_187
+      rect:
+        serializedVersion: 2
+        x: 2530
+        y: 989
+        width: 170
+        height: 110
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: all_flags_188
+      rect:
+        serializedVersion: 2
+        x: 2760
+        y: 989
+        width: 170
+        height: 110
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: all_flags_189
+      rect:
+        serializedVersion: 2
+        x: 2990
+        y: 989
+        width: 170
+        height: 110
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: all_flags_190
+      rect:
+        serializedVersion: 2
+        x: 3220
+        y: 989
+        width: 170
+        height: 110
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: all_flags_191
+      rect:
+        serializedVersion: 2
+        x: 3450
+        y: 989
+        width: 170
+        height: 110
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: all_flags_192
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 849
+        width: 170
+        height: 110
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: all_flags_193
+      rect:
+        serializedVersion: 2
+        x: 230
+        y: 849
+        width: 170
+        height: 110
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: all_flags_194
+      rect:
+        serializedVersion: 2
+        x: 460
+        y: 849
+        width: 170
+        height: 110
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: all_flags_195
+      rect:
+        serializedVersion: 2
+        x: 690
+        y: 849
+        width: 170
+        height: 110
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: all_flags_196
+      rect:
+        serializedVersion: 2
+        x: 920
+        y: 849
+        width: 170
+        height: 110
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: all_flags_197
+      rect:
+        serializedVersion: 2
+        x: 1150
+        y: 849
+        width: 170
+        height: 110
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: all_flags_198
+      rect:
+        serializedVersion: 2
+        x: 1380
+        y: 849
+        width: 170
+        height: 110
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: all_flags_199
+      rect:
+        serializedVersion: 2
+        x: 1610
+        y: 849
+        width: 170
+        height: 110
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: all_flags_200
+      rect:
+        serializedVersion: 2
+        x: 1840
+        y: 849
+        width: 170
+        height: 110
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: all_flags_201
+      rect:
+        serializedVersion: 2
+        x: 2070
+        y: 849
+        width: 170
+        height: 110
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: all_flags_202
+      rect:
+        serializedVersion: 2
+        x: 2300
+        y: 849
+        width: 170
+        height: 110
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: all_flags_203
+      rect:
+        serializedVersion: 2
+        x: 2530
+        y: 849
+        width: 170
+        height: 110
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: all_flags_204
+      rect:
+        serializedVersion: 2
+        x: 2760
+        y: 849
+        width: 170
+        height: 110
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: all_flags_205
+      rect:
+        serializedVersion: 2
+        x: 2990
+        y: 849
+        width: 170
+        height: 110
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: all_flags_206
+      rect:
+        serializedVersion: 2
+        x: 3220
+        y: 849
+        width: 170
+        height: 110
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: all_flags_207
+      rect:
+        serializedVersion: 2
+        x: 3450
+        y: 849
+        width: 170
+        height: 110
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: all_flags_208
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 709
+        width: 170
+        height: 110
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: all_flags_209
+      rect:
+        serializedVersion: 2
+        x: 230
+        y: 709
+        width: 170
+        height: 110
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: all_flags_210
+      rect:
+        serializedVersion: 2
+        x: 460
+        y: 709
+        width: 170
+        height: 110
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: all_flags_211
+      rect:
+        serializedVersion: 2
+        x: 690
+        y: 709
+        width: 170
+        height: 110
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: all_flags_212
+      rect:
+        serializedVersion: 2
+        x: 920
+        y: 709
+        width: 170
+        height: 110
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: all_flags_213
+      rect:
+        serializedVersion: 2
+        x: 1150
+        y: 709
+        width: 170
+        height: 110
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: all_flags_214
+      rect:
+        serializedVersion: 2
+        x: 1380
+        y: 709
+        width: 170
+        height: 110
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: all_flags_215
+      rect:
+        serializedVersion: 2
+        x: 1610
+        y: 709
+        width: 170
+        height: 110
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: all_flags_216
+      rect:
+        serializedVersion: 2
+        x: 1840
+        y: 709
+        width: 170
+        height: 110
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: all_flags_217
+      rect:
+        serializedVersion: 2
+        x: 2070
+        y: 709
+        width: 170
+        height: 110
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: all_flags_218
+      rect:
+        serializedVersion: 2
+        x: 2300
+        y: 709
+        width: 170
+        height: 110
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: all_flags_219
+      rect:
+        serializedVersion: 2
+        x: 2530
+        y: 709
+        width: 170
+        height: 110
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: all_flags_220
+      rect:
+        serializedVersion: 2
+        x: 2760
+        y: 709
+        width: 170
+        height: 110
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: all_flags_221
+      rect:
+        serializedVersion: 2
+        x: 2990
+        y: 709
+        width: 170
+        height: 110
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: all_flags_222
+      rect:
+        serializedVersion: 2
+        x: 3220
+        y: 709
+        width: 170
+        height: 110
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: all_flags_223
+      rect:
+        serializedVersion: 2
+        x: 3450
+        y: 709
+        width: 170
+        height: 110
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: all_flags_224
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 569
+        width: 170
+        height: 110
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: all_flags_225
+      rect:
+        serializedVersion: 2
+        x: 230
+        y: 569
+        width: 170
+        height: 110
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: all_flags_226
+      rect:
+        serializedVersion: 2
+        x: 460
+        y: 569
+        width: 170
+        height: 110
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: all_flags_227
+      rect:
+        serializedVersion: 2
+        x: 690
+        y: 569
+        width: 170
+        height: 110
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: all_flags_228
+      rect:
+        serializedVersion: 2
+        x: 920
+        y: 569
+        width: 170
+        height: 110
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: all_flags_229
+      rect:
+        serializedVersion: 2
+        x: 1150
+        y: 569
+        width: 170
+        height: 110
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: all_flags_230
+      rect:
+        serializedVersion: 2
+        x: 1380
+        y: 569
+        width: 170
+        height: 110
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: all_flags_231
+      rect:
+        serializedVersion: 2
+        x: 1610
+        y: 569
+        width: 170
+        height: 110
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: all_flags_232
+      rect:
+        serializedVersion: 2
+        x: 1840
+        y: 569
+        width: 170
+        height: 110
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: all_flags_233
+      rect:
+        serializedVersion: 2
+        x: 2070
+        y: 569
+        width: 170
+        height: 110
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: all_flags_234
+      rect:
+        serializedVersion: 2
+        x: 2300
+        y: 569
+        width: 170
+        height: 110
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: all_flags_235
+      rect:
+        serializedVersion: 2
+        x: 2530
+        y: 569
+        width: 170
+        height: 110
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: all_flags_236
+      rect:
+        serializedVersion: 2
+        x: 2760
+        y: 569
+        width: 170
+        height: 110
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: all_flags_237
+      rect:
+        serializedVersion: 2
+        x: 2990
+        y: 569
+        width: 170
+        height: 110
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: all_flags_238
+      rect:
+        serializedVersion: 2
+        x: 3220
+        y: 569
+        width: 170
+        height: 110
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: all_flags_239
+      rect:
+        serializedVersion: 2
+        x: 3450
+        y: 569
+        width: 170
+        height: 110
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: all_flags_240
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 429
+        width: 170
+        height: 110
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: all_flags_241
+      rect:
+        serializedVersion: 2
+        x: 230
+        y: 429
+        width: 170
+        height: 110
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: all_flags_242
+      rect:
+        serializedVersion: 2
+        x: 460
+        y: 429
+        width: 170
+        height: 110
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: all_flags_243
+      rect:
+        serializedVersion: 2
+        x: 690
+        y: 429
+        width: 170
+        height: 110
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: all_flags_244
+      rect:
+        serializedVersion: 2
+        x: 920
+        y: 429
+        width: 170
+        height: 110
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: all_flags_245
+      rect:
+        serializedVersion: 2
+        x: 1150
+        y: 429
+        width: 170
+        height: 110
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: all_flags_246
+      rect:
+        serializedVersion: 2
+        x: 1380
+        y: 429
+        width: 170
+        height: 110
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: all_flags_247
+      rect:
+        serializedVersion: 2
+        x: 1610
+        y: 429
+        width: 170
+        height: 110
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: all_flags_248
+      rect:
+        serializedVersion: 2
+        x: 1840
+        y: 429
+        width: 170
+        height: 110
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: all_flags_249
+      rect:
+        serializedVersion: 2
+        x: 2070
+        y: 429
+        width: 170
+        height: 110
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: all_flags_250
+      rect:
+        serializedVersion: 2
+        x: 2300
+        y: 429
+        width: 170
+        height: 110
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: all_flags_251
+      rect:
+        serializedVersion: 2
+        x: 2530
+        y: 429
+        width: 170
+        height: 110
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: all_flags_252
+      rect:
+        serializedVersion: 2
+        x: 2760
+        y: 429
+        width: 170
+        height: 110
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: all_flags_253
+      rect:
+        serializedVersion: 2
+        x: 2990
+        y: 429
+        width: 170
+        height: 110
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: all_flags_254
+      rect:
+        serializedVersion: 2
+        x: 3220
+        y: 429
+        width: 170
+        height: 110
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: all_flags_255
+      rect:
+        serializedVersion: 2
+        x: 3450
+        y: 429
+        width: 170
+        height: 110
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: all_flags_256
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 289
+        width: 170
+        height: 110
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: all_flags_257
+      rect:
+        serializedVersion: 2
+        x: 230
+        y: 289
+        width: 170
+        height: 110
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: all_flags_258
+      rect:
+        serializedVersion: 2
+        x: 460
+        y: 289
+        width: 170
+        height: 110
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: all_flags_259
+      rect:
+        serializedVersion: 2
+        x: 690
+        y: 289
+        width: 170
+        height: 110
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: all_flags_260
+      rect:
+        serializedVersion: 2
+        x: 920
+        y: 289
+        width: 170
+        height: 110
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: all_flags_261
+      rect:
+        serializedVersion: 2
+        x: 1150
+        y: 289
+        width: 170
+        height: 110
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: all_flags_262
+      rect:
+        serializedVersion: 2
+        x: 1380
+        y: 289
+        width: 170
+        height: 110
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: all_flags_263
+      rect:
+        serializedVersion: 2
+        x: 1610
+        y: 289
+        width: 170
+        height: 110
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: all_flags_264
+      rect:
+        serializedVersion: 2
+        x: 1840
+        y: 289
+        width: 170
+        height: 110
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: all_flags_265
+      rect:
+        serializedVersion: 2
+        x: 2070
+        y: 289
+        width: 170
+        height: 110
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: all_flags_266
+      rect:
+        serializedVersion: 2
+        x: 2300
+        y: 289
+        width: 170
+        height: 110
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: all_flags_267
+      rect:
+        serializedVersion: 2
+        x: 2530
+        y: 289
+        width: 170
+        height: 110
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: all_flags_268
+      rect:
+        serializedVersion: 2
+        x: 2760
+        y: 289
+        width: 170
+        height: 110
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: all_flags_269
+      rect:
+        serializedVersion: 2
+        x: 2990
+        y: 289
+        width: 170
+        height: 110
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: all_flags_270
+      rect:
+        serializedVersion: 2
+        x: 3220
+        y: 289
+        width: 170
+        height: 110
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: all_flags_271
+      rect:
+        serializedVersion: 2
+        x: 3450
+        y: 289
+        width: 170
+        height: 110
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: all_flags_272
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 149
+        width: 170
+        height: 110
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: all_flags_273
+      rect:
+        serializedVersion: 2
+        x: 230
+        y: 149
+        width: 170
+        height: 110
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: all_flags_274
+      rect:
+        serializedVersion: 2
+        x: 460
+        y: 149
+        width: 170
+        height: 110
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: all_flags_275
+      rect:
+        serializedVersion: 2
+        x: 690
+        y: 149
+        width: 170
+        height: 110
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: all_flags_276
+      rect:
+        serializedVersion: 2
+        x: 920
+        y: 149
+        width: 170
+        height: 110
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: all_flags_277
+      rect:
+        serializedVersion: 2
+        x: 1150
+        y: 149
+        width: 170
+        height: 110
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: all_flags_278
+      rect:
+        serializedVersion: 2
+        x: 1380
+        y: 149
+        width: 170
+        height: 110
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: all_flags_279
+      rect:
+        serializedVersion: 2
+        x: 1610
+        y: 149
+        width: 170
+        height: 110
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: all_flags_280
+      rect:
+        serializedVersion: 2
+        x: 1840
+        y: 149
+        width: 170
+        height: 110
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: all_flags_281
+      rect:
+        serializedVersion: 2
+        x: 2070
+        y: 149
+        width: 170
+        height: 110
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: all_flags_282
+      rect:
+        serializedVersion: 2
+        x: 2300
+        y: 149
+        width: 170
+        height: 110
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: all_flags_283
+      rect:
+        serializedVersion: 2
+        x: 2530
+        y: 149
+        width: 170
+        height: 110
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: all_flags_284
+      rect:
+        serializedVersion: 2
+        x: 2760
+        y: 149
+        width: 170
+        height: 110
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: all_flags_285
+      rect:
+        serializedVersion: 2
+        x: 2990
+        y: 149
+        width: 170
+        height: 110
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: all_flags_286
+      rect:
+        serializedVersion: 2
+        x: 3220
+        y: 149
+        width: 170
+        height: 110
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: all_flags_287
+      rect:
+        serializedVersion: 2
+        x: 3450
+        y: 149
+        width: 170
+        height: 110
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: all_flags_288
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 9
+        width: 170
+        height: 110
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: all_flags_289
+      rect:
+        serializedVersion: 2
+        x: 230
+        y: 9
+        width: 170
+        height: 110
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: all_flags_290
+      rect:
+        serializedVersion: 2
+        x: 460
+        y: 9
+        width: 170
+        height: 110
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: all_flags_291
+      rect:
+        serializedVersion: 2
+        x: 690
+        y: 9
+        width: 170
+        height: 110
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: all_flags_292
+      rect:
+        serializedVersion: 2
+        x: 920
+        y: 9
+        width: 170
+        height: 110
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: all_flags_293
+      rect:
+        serializedVersion: 2
+        x: 1150
+        y: 9
+        width: 170
+        height: 110
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: all_flags_294
+      rect:
+        serializedVersion: 2
+        x: 1380
+        y: 9
+        width: 170
+        height: 110
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: all_flags_295
+      rect:
+        serializedVersion: 2
+        x: 1610
+        y: 9
+        width: 170
+        height: 110
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: all_flags_296
+      rect:
+        serializedVersion: 2
+        x: 1840
+        y: 9
+        width: 170
+        height: 110
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: all_flags_297
+      rect:
+        serializedVersion: 2
+        x: 2070
+        y: 9
+        width: 170
+        height: 110
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: all_flags_298
+      rect:
+        serializedVersion: 2
+        x: 2300
+        y: 9
+        width: 170
+        height: 110
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: all_flags_299
+      rect:
+        serializedVersion: 2
+        x: 2530
+        y: 9
+        width: 170
+        height: 110
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: all_flags_300
+      rect:
+        serializedVersion: 2
+        x: 2760
+        y: 9
+        width: 170
+        height: 110
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: all_flags_301
+      rect:
+        serializedVersion: 2
+        x: 2990
+        y: 9
+        width: 170
+        height: 110
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: all_flags_302
+      rect:
+        serializedVersion: 2
+        x: 3220
+        y: 9
+        width: 170
+        height: 110
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: all_flags_303
+      rect:
+        serializedVersion: 2
+        x: 3450
+        y: 9
+        width: 170
+        height: 110
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    outline: []
+  spritePackingTag: 
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
