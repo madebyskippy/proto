@@ -6,23 +6,13 @@ using UnityEngine.UI;
 
 public class oly_manager : MonoBehaviour {
 
-	/*
-	 * randomly pick which sport out of maybe 3 or 5
-	 * 
-	 * randomly determine which countries are playing
-	 * randomly decide which one wins
-	 * 
-	 * make user choose at the end
-	 * 		phone comes up at the end of a friend being like "who won?!"
-	 * 		and you have to click the answer
-	 */
-
 	[SerializeField] GameObject background;
 	[SerializeField] GameObject silhouette;
 	[SerializeField] GameObject[] parents;
 
 	[SerializeField] GameObject start;
 	[SerializeField] GameObject end;
+	[SerializeField] Text endText;
 	[SerializeField] Image[] endchoices;
 	[SerializeField] Image arrow;
 
@@ -32,7 +22,7 @@ public class oly_manager : MonoBehaviour {
 	int layers = 4;
 	Vector2 densityRange = new Vector2(5f,7f);
 	Vector2 rangeX = new Vector2(-10f,10f);
-	Vector2 rangeY = new Vector2(-8f,-4f);
+	Vector2 rangeY = new Vector2(-4f,-1f);
 
 	int mode; //0 1 or 2 (enter answer) or 3 (actual endgame state)
 
@@ -45,10 +35,8 @@ public class oly_manager : MonoBehaviour {
 			GameObject[] layer = new GameObject[Random.Range ((int)densityRange.x, (int)densityRange.y+1)];
 			for (int j = 0; j < layer.Length; j++) {
 				GameObject t = Instantiate (silhouette, new Vector3 (Random.Range(rangeX.x*2f,rangeX.y*2f), Random.Range(rangeY.x,rangeY.y), 0f), Quaternion.identity);
-				if (Random.Range (0f, 1f) < 0.5f) {
-					t.GetComponent<SpriteRenderer> ().flipX = true;
-				}
 				t.transform.parent = parents [i].transform;
+				t.GetComponent<SpriteRenderer> ().sortingOrder = i + 1;
 				layer [j] = t;
 			}
 			crowd.Add (layer);
@@ -60,7 +48,7 @@ public class oly_manager : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 		if (Input.GetKeyDown (KeyCode.Space)) {
-			if (mode == 1 || mode == 3) {
+			if (mode == 3) {
 				SceneManager.LoadScene ("olympics");
 			} else {
 				mode = 1;
@@ -69,6 +57,8 @@ public class oly_manager : MonoBehaviour {
 			}
 		}if (Input.GetKeyDown(KeyCode.Escape)) {
 			Application.Quit();
+		}if (Input.GetKeyDown (KeyCode.R)) {
+			SceneManager.LoadScene ("olympics");
 		}
 			
 		float horiz = Input.GetAxis ("Horizontal");
@@ -84,8 +74,8 @@ public class oly_manager : MonoBehaviour {
 
 			for (int i = 0; i < parents.Length; i++) {
 				t = parents [i].transform.position;
-				t.y += 0.1f * (i + 1) * vert;
-				t.x += 0.1f * (i + 1) * horiz;
+				t.y += 0.05f * (i + 1) * vert;
+				t.x += 0.05f * (i + 1) * horiz;
 				t.y = Mathf.Clamp (t.y, -1.5f, 3f);
 				t.x = Mathf.Clamp (t.x, -8f, 8f);
 				parents [i].transform.position = t;
@@ -125,9 +115,11 @@ public class oly_manager : MonoBehaviour {
 		mode = 3;
 		if (choice == sport.getwinner ()) {
 			arrow.color = Color.green;
+			endText.text = "wow good eyes!\n(space to restart)";
 			//waooo u were rite
 		} else {
 			arrow.color = Color.red;
+			endText.text = "seems like you weren't watching close enough )-:\n(space to restart)";
 			//u lose sucker
 		}
 	}

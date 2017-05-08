@@ -30,7 +30,7 @@ public class oly_sport : MonoBehaviour {
 		"VIETNAM", "VIRGIN ISLANDS BRITISH", "VIRGIN ISLANDS US", "YEMEN", "ZAMBIA", "ZIMBABWE"
 	};
 
-	int endpoint = 12;
+	int endpoint = 11;
 
 	GameObject[] athletes = new GameObject[5];
 
@@ -50,9 +50,10 @@ public class oly_sport : MonoBehaviour {
 		winner = Random.Range (0, athletes.Length);
 		for (int i = 0; i < athletes.Length; i++) {
 			a [i] = Random.Range (0, flags.Length);
-			athletes [i] = Instantiate (aprefab, new Vector3 (-13.5f,4f-i*2f,6f), Quaternion.identity);
+			athletes [i] = Instantiate (aprefab, new Vector3 (-13.5f,3.5f-i*1.85f,6f), Quaternion.identity);
 			athletes [i].GetComponent<SpriteRenderer> ().sprite = flags [a[i]];
 			athletes [i].transform.parent = this.transform;
+			athletes [i].transform.GetChild (0).GetComponent<Animator> ().Play ("still");
 		}
 	}
 	
@@ -74,12 +75,22 @@ public class oly_sport : MonoBehaviour {
 			}
 			if (alldone) {
 				manager.endRace ();
-				going = false;
+//				going = false;
+				setGoing(false);
 			}
 		}
 	}
 
 	public void setGoing(bool g){
+		if (!going && g) {
+			for (int i = 0; i < athletes.Length; i++) {
+				athletes [i].transform.GetChild (0).GetComponent<Animator> ().Play ("running");
+			}
+		} else if (going && !g) {
+			for (int i = 0; i < athletes.Length; i++) {
+				athletes [i].transform.GetChild (0).GetComponent<Animator> ().Play ("still");
+			}
+		}
 		going = g;
 	}
 
